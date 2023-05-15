@@ -1,18 +1,20 @@
+using System.ComponentModel;
 using selenium_gui_winform.Properties;
 using System.Diagnostics;
 using System.Globalization;
 using System.Net;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace selenium_gui_winform {
     public partial class Form1 : Form {
-        private string browser = @"Edge";
+        private string _browser = @"Edge";
 
         public Form1() {
             InitializeComponent();
         }
 
-        private void langInit() {
+        private void LangInit() {
             // Apply Localization
             Text = res.appName;
             labelTarget.Text = res.labelTarget + @": ";
@@ -32,7 +34,7 @@ namespace selenium_gui_winform {
             Settings.Default.lastLang = lang;
             Settings.Default.Save();
             MessageBox.Show(res.changeLang, res.information, MessageBoxButtons.OK, MessageBoxIcon.Information);
-            langInit();
+            LangInit();
         }
 
         private void itemEng_Click(object sender, EventArgs e) {
@@ -40,7 +42,7 @@ namespace selenium_gui_winform {
             Settings.Default.Save();
             itemEng.Checked = true;
             itemKor.Checked = false;
-            changeLang("en");
+            ChangeLang("en");
         }
 
         private void itemKor_Click(object sender, EventArgs e) {
@@ -50,7 +52,7 @@ namespace selenium_gui_winform {
             }
             itemKor.Checked = true;
             itemEng.Checked = false;
-            changeLang("ko");
+            ChangeLang("ko");
         }
 
         private void cbSave_CheckedChanged(object sender, EventArgs e) {
@@ -58,13 +60,13 @@ namespace selenium_gui_winform {
             Settings.Default.Save();
         }
 
-        // Group for radion button for select browser
+        // Group for radio button for select browser
         private void radioEdge_CheckedChanged(object sender, EventArgs e) {
             if (cbSave.Checked) {
                 Settings.Default.lastBrowser = 0;
                 Settings.Default.Save();
             }
-            browser = radioEdge.Text;
+            _browser = radioEdge.Text;
         }
 
         private void radioChrome_CheckedChanged(object sender, EventArgs e) {
@@ -72,7 +74,7 @@ namespace selenium_gui_winform {
                 Settings.Default.lastBrowser = 1;
                 Settings.Default.Save();
             }
-            browser = radioChrome.Text;
+            _browser = radioChrome.Text;
         }
 
         private void radioFirefox_CheckedChanged(object sender, EventArgs e) {
@@ -80,7 +82,7 @@ namespace selenium_gui_winform {
                 Settings.Default.lastBrowser = 2;
                 Settings.Default.Save();
             }
-            browser = radioFirefox.Text;
+            _browser = radioFirefox.Text;
         }
 
         private void radioOpera_CheckedChanged(object sender, EventArgs e) {
@@ -88,7 +90,7 @@ namespace selenium_gui_winform {
                 Settings.Default.lastBrowser = 3;
                 Settings.Default.Save();
             }
-            browser = radioOpera.Text;
+            _browser = radioOpera.Text;
         }
         // End of group
 
@@ -112,7 +114,7 @@ namespace selenium_gui_winform {
 
             if (btnStart.Text == res.btnStart) {
                 textBox1.AppendText(@"[INFO] Start detection" + "\r\n");
-                textBox1.AppendText(@"Browser: " + browser + "\r\n");
+                textBox1.AppendText(@"Browser: " + _browser + "\r\n");
                 textBox1.AppendText(@"URL: " + tbURL.Text + "\r\n");
                 textBox1.AppendText(@"------------------------------" + "\r\n");
                 textBox1.AppendText(res.waitForEnd + "\r\n");
@@ -123,7 +125,7 @@ namespace selenium_gui_winform {
                     ProcessStartInfo proc = new ProcessStartInfo {
 
                         FileName = @"python",
-                        Arguments = ".\\execute\\main.py --browser=\"" + browser + "\" --url=\"" + tbURL.Text + "\"",
+                        Arguments = ".\\execute\\main.py --browser=\"" + _browser + "\" --url=\"" + tbURL.Text + "\"",
                         RedirectStandardOutput = true,
                         RedirectStandardError = true,
                         CreateNoWindow = true
@@ -171,22 +173,22 @@ namespace selenium_gui_winform {
                 switch (Settings.Default.lastBrowser) {
                     case 0:
                         radioEdge.Checked = true;
-                        browser = radioEdge.Text;
+                        _browser = radioEdge.Text;
                         break;
 
                     case 1:
                         radioChrome.Checked = true;
-                        browser = radioChrome.Text;
+                        _browser = radioChrome.Text;
                         break;
 
                     case 2:
                         radioFirefox.Checked = true;
-                        browser = radioFirefox.Text;
+                        _browser = radioFirefox.Text;
                         break;
 
                     case 3:
                         radioOpera.Checked = true;
-                        browser = radioOpera.Text;
+                        _browser = radioOpera.Text;
                         break;
                 }
             }
@@ -202,7 +204,7 @@ namespace selenium_gui_winform {
             }
 
             // Apply Language
-            langInit();
+            LangInit();
 
             // Append Text
             textBox1.AppendText(@"Selenium SQLi Dector" + "\r\n");
