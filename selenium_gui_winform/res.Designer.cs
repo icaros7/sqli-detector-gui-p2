@@ -61,6 +61,24 @@ namespace selenium_gui_winform {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to This project powered by K-Shield Jr. A-09 team\nCopy left all right for you :).
+        /// </summary>
+        public static string aboutMessage {
+            get {
+                return ResourceManager.GetString("aboutMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to About.
+        /// </summary>
+        public static string aboutTitle {
+            get {
+                return ResourceManager.GetString("aboutTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Selenium SQLi Dector.
         /// </summary>
         public static string appName {
@@ -102,6 +120,15 @@ namespace selenium_gui_winform {
         public static string changeLang {
             get {
                 return ResourceManager.GetString("changeLang", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Error.
+        /// </summary>
+        public static string error {
+            get {
+                return ResourceManager.GetString("error", resourceCulture);
             }
         }
         
@@ -183,6 +210,42 @@ namespace selenium_gui_winform {
         public static string stripLang {
             get {
                 return ResourceManager.GetString("stripLang", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Failed to read version information at online. Please check your internet connection or contact to your network management team..
+        /// </summary>
+        public static string updateFail {
+            get {
+                return ResourceManager.GetString("updateFail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Found new version. Do you want to update?.
+        /// </summary>
+        public static string updateNew {
+            get {
+                return ResourceManager.GetString("updateNew", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This version is up-to-date..
+        /// </summary>
+        public static string updateNoNeed {
+            get {
+                return ResourceManager.GetString("updateNoNeed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Starting process. Please wait for end..
+        /// </summary>
+        public static string waitForEnd {
+            get {
+                return ResourceManager.GetString("waitForEnd", resourceCulture);
             }
         }
     }

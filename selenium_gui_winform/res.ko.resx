@@ -117,6 +117,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="aboutMessage" xml:space="preserve">
+    <value>본 프로젝트는 K-Shield Jr.에 의해 제작 되었습니다.\nCopyleft K-Shield Jr. All left reserved for you :)</value>
+  </data>
+  <data name="aboutTitle" xml:space="preserve">
+    <value>About</value>
+  </data>
   <data name="appName" xml:space="preserve">
     <value>Selenium SQLi Dector</value>
   </data>
@@ -131,6 +137,9 @@
   </data>
   <data name="changeLang" xml:space="preserve">
     <value>언어를 한국어로 바꾸었습니다.</value>
+  </data>
+  <data name="error" xml:space="preserve">
+    <value>오류</value>
   </data>
   <data name="groupBrowser" xml:space="preserve">
     <value>브라우저 선택</value>
@@ -158,5 +167,17 @@
   </data>
   <data name="stripLang" xml:space="preserve">
     <value>언어 (&amp;L)</value>
+  </data>
+  <data name="updateFail" xml:space="preserve">
+    <value>온라인에서 버전 정보를 가져오는데 실패 했습니다. 인터넷 연결을 확인 하거나 네트워크 매니저 팀에게 연락하십시오.</value>
+  </data>
+  <data name="updateNew" xml:space="preserve">
+    <value>새 버전을 찾았습니다. 다운로드 하시겠습니까?</value>
+  </data>
+  <data name="updateNoNeed" xml:space="preserve">
+    <value>최신 버전을 사용 중 입니다.</value>
+  </data>
+  <data name="waitForEnd" xml:space="preserve">
+    <value>프로세스를 시작 합니다. 잠시 기다려 주십시오.</value>
   </data>
 </root>

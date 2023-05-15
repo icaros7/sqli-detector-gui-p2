@@ -1,6 +1,7 @@
 using selenium_gui_winform.Properties;
 using System.Diagnostics;
 using System.Globalization;
+using System.Net;
 using System.Text;
 
 namespace selenium_gui_winform {
@@ -57,6 +58,7 @@ namespace selenium_gui_winform {
             Settings.Default.Save();
         }
 
+        // Group for radion button for select browser
         private void radioEdge_CheckedChanged(object sender, EventArgs e) {
             if (cbSave.Checked) {
                 Settings.Default.lastBrowser = 0;
@@ -88,21 +90,40 @@ namespace selenium_gui_winform {
             }
             browser = radioOpera.Text;
         }
+        // End of group
 
+        /// <summary>
+        /// BtnStart function for each case
+        /// </summary>
         private void btnStart_Click(object sender, EventArgs e) {
             if (cbSave.Checked) {
                 Settings.Default.lastURL = tbURL.Text;
                 Settings.Default.Save();
             }
+
+            string path = Application.ExecutablePath + @"\execute\";
+
+            if ((!File.Exists(path + @"main.py")) || (!File.Exists(path + @"get_html.py")) || (!File.Exists(path + @"crawler.py"))) {
+                // TODO: Downlaod least selenium project
+                return;
+            }
+
+            // TODO: Check webdriver exist
+
             if (btnStart.Text == res.btnStart) {
-                textBox1.AppendText("\r\n" + @"[INFO] Start detection");
+                textBox1.AppendText(@"[INFO] Start detection" + "\r\n");
+                textBox1.AppendText(@"Browser: " + browser + "\r\n");
+                textBox1.AppendText(@"URL: " + tbURL.Text + "\r\n");
+                textBox1.AppendText(@"------------------------------" + "\r\n");
+                textBox1.AppendText(res.waitForEnd + "\r\n");
                 btnStart.Text = res.btnStop;
 
+                // TODO: Async programming
                 try {
                     ProcessStartInfo proc = new ProcessStartInfo {
 
-                        FileName = @"python", 
-                        Arguments = "main.py --browser=\"Edge\" --url=\"https://minnote.net\"",
+                        FileName = @"python",
+                        Arguments = ".\\execute\\main.py --browser=\"" + browser + "\" --url=\"" + tbURL.Text + "\"",
                         RedirectStandardOutput = true,
                         RedirectStandardError = true,
                         CreateNoWindow = true
@@ -113,20 +134,26 @@ namespace selenium_gui_winform {
 
                     using (Process procc = Process.Start(proc)) {
                         using (StreamReader reader = procc.StandardOutput) {
-                            while (!procc.HasExited) { textBox1.AppendText("\r\n" +  reader.ReadLine()); }
+                            while (!procc.HasExited) { textBox1.AppendText("\r\n" + reader.ReadLine()); }
 
                             error = procc.StandardError.ReadToEnd();
                             result = procc.StandardOutput.ReadToEnd();
                         }
                     }
 
-                    textBox1.AppendText("\r\n" + error);
-                    textBox1.AppendText("\r\n" + result);
+                    textBox1.AppendText(error + "\r\n");
+                    textBox1.AppendText(result + "\r\n");
                 }
                 catch (Exception ex) {
-                    textBox1.AppendText("\r\n" +  ex.Message);
+                    textBox1.AppendText(ex.Message + "\r\n");
                     btnStart.Text = res.btnStart;
                 }
+                finally {
+                    textBox1.AppendText(@"[INFO] Finished.");
+                    btnStart.Text = res.btnStart;
+                }
+
+                // TODO: Open Directory
             }
             else {
                 textBox1.AppendText("\r\n" + @"[INFO] Stop dectection");
@@ -134,6 +161,9 @@ namespace selenium_gui_winform {
             }
         }
 
+        /// <summary>
+        /// Call restore settings when I checked at saveSettings and apply language settings
+        /// </summary>
         private void Form1_Load(object sender, EventArgs e) {
             if (Settings.Default.saveSettings) {
                 if (Settings.Default.saveSettings) { cbSave.Checked = true; }
@@ -173,6 +203,50 @@ namespace selenium_gui_winform {
 
             // Apply Language
             langInit();
+
+            // Append Text
+            textBox1.AppendText(@"Selenium SQLi Dector" + "\r\n");
+            textBox1.AppendText(@"Version: " + Application.ProductVersion + "\r\n");
+            textBox1.AppendText(@"K-Shield Jr.: A-09" + "\r\n");
+            textBox1.AppendText(@"------------------------------" + "\r\n");
+        }
+
+        /// <summary>
+        /// Call MessageBox for About
+        /// </summary>
+        private void itemAbout_Click(object sender, EventArgs e) {
+            MessageBox.Show(res.aboutMessage, res.aboutTitle, MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        /// <summary>
+        /// Check update
+        /// </summary>
+        private void itemVersion_Click(object sender, EventArgs e) {
+            // Parsing version text
+            int version = 0;
+            try {
+                WebClient wc = new WebClient();
+                wc.Encoding = Encoding.UTF8;
+                int.TryParse(wc.DownloadString(@"https://raw.githubusercontent.com/ksj-10th-a09/selenium_crawl_p1/main/version.txt").Replace(".", ""), out version);
+            }
+            catch (Exception ex) {
+                MessageBox.Show(ex.ToString() + "\r\n" + @"Please contact to support team.", @"Error", MessageBoxButtons.OK, MessageBoxIcon.Error); return;
+            }
+            finally {
+                if (version == 0) { MessageBox.Show(res.updateFail, res.error, MessageBoxButtons.OK, MessageBoxIcon.Error); }
+                if (version > int.Parse(Application.ProductVersion.Replace(".", ""))) {
+                    if (MessageBox.Show(res.updateNew, res.information, MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK) {
+                        // TODO: Update download func
+                    }
+                }
+                else {
+                    MessageBox.Show(res.updateNoNeed, res.information, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+        }
+
+        private void itemExit_Click(object sender, EventArgs e) {
+            Application.Exit();
         }
     }
 }
