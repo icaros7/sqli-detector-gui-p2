@@ -214,7 +214,7 @@ namespace selenium_gui_winform {
                 }
             }
             else {
-                textBox1.AppendText("\r\n" + @"[INFO] Stop dectection");
+                textBox1.AppendText("\r\n" + @"[INFO] Stop detection");
                 btnStart.Text = res.btnStart;
             }
         }
@@ -263,7 +263,7 @@ namespace selenium_gui_winform {
             LangInit();
 
             // Append Text
-            textBox1.AppendText(@"Selenium SQLi Dector" + "\r\n");
+            textBox1.AppendText(@"Selenium SQLi Detector" + "\r\n");
             textBox1.AppendText(@"Version: " + Application.ProductVersion + "\r\n");
             textBox1.AppendText(@"K-Shield Jr.: A-09" + "\r\n");
             textBox1.AppendText(@"------------------------------" + "\r\n");

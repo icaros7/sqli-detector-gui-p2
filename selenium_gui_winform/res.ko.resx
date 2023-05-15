@@ -121,7 +121,7 @@
     <value>본 프로젝트는 K-Shield Jr.에 의해 제작 되었습니다.\nCopyleft K-Shield Jr. All left reserved for you :)</value>
   </data>
   <data name="appName" xml:space="preserve">
-    <value>Selenium SQLi Dector</value>
+    <value>Selenium SQLi Detector</value>
   </data>
   <data name="btnStart" xml:space="preserve">
     <value>시작</value>

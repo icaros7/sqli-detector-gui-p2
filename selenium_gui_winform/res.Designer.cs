@@ -69,7 +69,7 @@ namespace selenium_gui_winform {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Selenium SQLi Dector.
+        ///   Looks up a localized string similar to Selenium SQLi Detector.
         /// </summary>
         public static string appName {
             get {
