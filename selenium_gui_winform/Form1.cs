@@ -9,6 +9,8 @@ using System.Text.RegularExpressions;
 namespace selenium_gui_winform {
     public partial class Form1 : Form {
         private string _browser = @"Edge";
+        public static ProcessStartInfo? Psi = null;
+        public static Process? Proc = null;
 
         public Form1() {
             InitializeComponent();
@@ -60,6 +62,37 @@ namespace selenium_gui_winform {
             MessageBox.Show(res.changeLang, res.information, MessageBoxButtons.OK, MessageBoxIcon.Information);
             LangInit();
         }
+
+        private async void StartCall() {
+            Proc.StartInfo = Psi;
+            Proc.Start();
+            
+            Proc.BeginOutputReadLine();
+            Proc.BeginErrorReadLine();
+
+            Proc.OutputDataReceived += (sender, e) => textBox1.AppendText(e.Data + "\r\n");
+            Proc.ErrorDataReceived  += (sender, e) => textBox1.AppendText(e.Data + "\r\n");
+                    
+            await Proc.WaitForExitAsync();
+            
+            Proc.CancelOutputRead();
+            Proc.CancelErrorRead();
+            Proc.Close();
+            
+            textBox1.AppendText(@"[INFO] Finished." + "\r\n");
+            btnStart.Text = res.btnStart;
+            
+            var reg     = new Regex(@"://(?<host>([a-z\d][-a-z\d]*[a-z\d]\.)*[a-z][-a-z\d]+[a-z])");
+            var workdir = Application.StartupPath + reg.Match(tbURL.Text).Result("${host}");
+            
+            try {
+                Process.Start(workdir);
+            }
+            catch (Win32Exception) {
+                MessageBox.Show(res.doneCrawl + "\n\n" + res.downPath + workdir, res.information, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
 
         private void itemEng_Click(object sender, EventArgs e) {
             Settings.Default.lastLang = @"en";
@@ -159,17 +192,15 @@ namespace selenium_gui_winform {
             }
 
             if (btnStart.Text == res.btnStart) {
-                textBox1.AppendText(@"[INFO] Start detection" + "\r\n");
+                textBox1.AppendText("\r\n" + @"[INFO] Start detection" + "\r\n");
                 textBox1.AppendText(@"Browser: " + _browser + "\r\n");
                 textBox1.AppendText(@"URL: " + tbURL.Text + "\r\n");
                 textBox1.AppendText(@"------------------------------" + "\r\n");
                 textBox1.AppendText(res.waitForEnd + "\r\n");
                 btnStart.Text = res.btnStop;
 
-                // TODO: Async programming
                 try {
-                    ProcessStartInfo proc = new ProcessStartInfo {
-
+                    Psi = new ProcessStartInfo {
                         FileName = @"python",
                         Arguments = ".\\execute\\main.py --browser=\"" + _browser + "\" --url=\"" + tbURL.Text + "\"",
                         RedirectStandardOutput = true,
@@ -177,41 +208,25 @@ namespace selenium_gui_winform {
                         CreateNoWindow = true
                     };
 
-                    var result = string.Empty;
-                    var error = string.Empty;
+                    Proc                     = new Process();
+                    Proc.EnableRaisingEvents = true;
 
-                    using (Process procc = Process.Start(proc)) {
-                        using (StreamReader reader = procc.StandardOutput) {
-                            while (!procc.HasExited) { textBox1.AppendText("\r\n" + reader.ReadLine()); }
-
-                            error = procc.StandardError.ReadToEnd();
-                            result = procc.StandardOutput.ReadToEnd();
-                        }
-                    }
-
-                    textBox1.AppendText(error + "\r\n");
-                    textBox1.AppendText(result + "\r\n");
+                    // Proc.OutputDataReceived += new DataReceivedEventHandler((sender, e) => {
+                    //     if (!string.IsNullOrEmpty(e.Data)) { textBox1.AppendText(e.Data + "\r\n"); }
+                    // });
+                    // Proc.ErrorDataReceived += new DataReceivedEventHandler((sender, e) => {
+                    //     if (!string.IsNullOrEmpty(e.Data)) { textBox1.AppendText(@"[ERROR] " + e.Data + "\r\n"); }
+                    // });
+            
+                    StartCall();
                 }
                 catch (Exception ex) {
                     textBox1.AppendText(ex.Message + "\r\n");
                     btnStart.Text = res.btnStart;
                 }
-                finally {
-                    textBox1.AppendText(@"[INFO] Finished.");
-                    btnStart.Text = res.btnStart;
-                }
-
-                var reg = new Regex(@"://(?<host>([a-z\d][-a-z\d]*[a-z\d]\.)*[a-z][-a-z\d]+[a-z])");
-                var workdir = Application.StartupPath + reg.Match(tbURL.Text).Result("${host}");
-                
-                try {
-                    Process.Start(workdir);
-                }
-                catch (Win32Exception) {
-                    MessageBox.Show(res.doneCrawl + "\n\n" + res.downPath + workdir, res.information, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
             }
             else {
+                ;
                 textBox1.AppendText("\r\n" + @"[INFO] Stop detection");
                 btnStart.Text = res.btnStart;
             }
