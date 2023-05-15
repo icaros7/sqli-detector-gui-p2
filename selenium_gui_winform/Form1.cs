@@ -29,7 +29,31 @@ namespace selenium_gui_winform {
             btnStart.Text = res.btnStart;
         }
 
-        private void changeLang(string lang) {
+        /// <summary>
+        /// Check exist what main execute files
+        /// </summary>
+        /// <returns>bool Exist or not</returns>
+        private static bool CheckExecuteExist() {
+            string path = Application.StartupPath;
+
+            return File.Exists(path + @"\execute\main.py") && File.Exists(path + @"\execute\get_html.py") &&
+                    File.Exists(path + @"\execute\crawler.py");
+        }
+
+        /// <summary>
+        /// Return exist each web driver
+        /// </summary>
+        /// <returns>bool Exist or not</returns>
+        private bool CheckWebDriverExist() {
+            return _browser switch {
+                "Edge" => File.Exists(Application.StartupPath + @"msedgedriver.exe"),
+                "Chrome" => File.Exists(Application.StartupPath + @"chromedriver.exe"),
+                "Firefox" => File.Exists(Application.StartupPath + @"geckodriver.exe"),
+                _ => false
+            };
+        }
+
+        private void ChangeLang(string lang) {
             Thread.CurrentThread.CurrentUICulture = new CultureInfo(lang);
             Settings.Default.lastLang = lang;
             Settings.Default.Save();
@@ -103,10 +127,34 @@ namespace selenium_gui_winform {
                 Settings.Default.Save();
             }
 
-            string path = Application.StartupPath;
+            // Check main.py exist
+            if (!CheckExecuteExist()) {
+                textBox1.AppendText(res.notFoundExecute);
 
-            if ((!File.Exists(path + @"main.py")) || (!File.Exists(path + @"get_html.py")) || (!File.Exists(path + @"crawler.py"))) {
-                // TODO: Downlaod least selenium project
+                //TODO: Split download application
+                try {
+                    Directory.CreateDirectory(Application.StartupPath + @"\execute");
+                    WebClient wc = new WebClient();
+                    wc.DownloadFile(
+                        "https://github.com/ksj-10th-a09/selenium_crawl_p1/releases/latest/download/main.py",
+                        @".\execute\main.py");
+                    wc.DownloadFile(
+                        "https://github.com/ksj-10th-a09/selenium_crawl_p1/releases/latest/download/crawler.py",
+                        @".\execute\crawler.py");
+                    wc.DownloadFile(
+                        "https://github.com/ksj-10th-a09/selenium_crawl_p1/releases/latest/download/get_html.py",
+                        @".\execute\get_html.py");
+                }
+                catch (Exception ex) {
+                    MessageBox.Show(ex.ToString(), res.error, MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    return;
+                }
+            }
+
+            if (!CheckWebDriverExist()) {
+                MessageBox.Show(_browser + res.webNo + "\n\n" + res.webPath + Application.StartupPath, res.information,
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
@@ -155,7 +203,15 @@ namespace selenium_gui_winform {
                     btnStart.Text = res.btnStart;
                 }
 
-                // TODO: Open Directory
+                var reg = new Regex(@"://(?<host>([a-z\d][-a-z\d]*[a-z\d]\.)*[a-z][-a-z\d]+[a-z])");
+                var workdir = Application.StartupPath + reg.Match(tbURL.Text).Result("${host}");
+                
+                try {
+                    Process.Start(workdir);
+                }
+                catch (Win32Exception) {
+                    MessageBox.Show(res.doneCrawl + "\n\n" + res.downPath + workdir, res.information, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
             else {
                 textBox1.AppendText("\r\n" + @"[INFO] Stop dectection");
