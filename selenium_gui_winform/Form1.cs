@@ -101,7 +101,7 @@ namespace selenium_gui_winform {
                 Settings.Default.Save();
             }
 
-            string path = Application.ExecutablePath + @"\execute\";
+            string path = Application.StartupPath;
 
             if ((!File.Exists(path + @"main.py")) || (!File.Exists(path + @"get_html.py")) || (!File.Exists(path + @"crawler.py"))) {
                 // TODO: Downlaod least selenium project
