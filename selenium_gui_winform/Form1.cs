@@ -158,8 +158,6 @@ namespace selenium_gui_winform {
                 return;
             }
 
-            // TODO: Check webdriver exist
-
             if (btnStart.Text == res.btnStart) {
                 textBox1.AppendText(@"[INFO] Start detection" + "\r\n");
                 textBox1.AppendText(@"Browser: " + _browser + "\r\n");
