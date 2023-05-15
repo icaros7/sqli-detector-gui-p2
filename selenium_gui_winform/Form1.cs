@@ -273,7 +273,7 @@ namespace selenium_gui_winform {
         /// Call MessageBox for About
         /// </summary>
         private void itemAbout_Click(object sender, EventArgs e) {
-            MessageBox.Show(res.aboutMessage, res.aboutTitle, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show(res.aboutMessage, res.itemAbout, MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         /// <summary>

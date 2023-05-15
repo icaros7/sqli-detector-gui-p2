@@ -120,9 +120,6 @@
   <data name="aboutMessage" xml:space="preserve">
     <value>This project powered by K-Shield Jr. A-09 team\nCopy left all right for you :)</value>
   </data>
-  <data name="aboutTitle" xml:space="preserve">
-    <value>About</value>
-  </data>
   <data name="appName" xml:space="preserve">
     <value>Selenium SQLi Dector</value>
   </data>
