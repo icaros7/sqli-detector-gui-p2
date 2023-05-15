@@ -82,6 +82,7 @@
             // 
             itemExit.Name = "itemExit";
             resources.ApplyResources(itemExit, "itemExit");
+            itemExit.Click += itemExit_Click;
             // 
             // stripLang
             // 
@@ -115,6 +116,7 @@
             // 
             itemVersion.Name = "itemVersion";
             resources.ApplyResources(itemVersion, "itemVersion");
+            itemVersion.Click += itemVersion_Click;
             // 
             // itemBar
             // 
@@ -125,6 +127,7 @@
             // 
             itemAbout.Name = "itemAbout";
             resources.ApplyResources(itemAbout, "itemAbout");
+            itemAbout.Click += itemAbout_Click;
             // 
             // groupBrowser
             // 
