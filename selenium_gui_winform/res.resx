@@ -120,11 +120,8 @@
   <data name="aboutMessage" xml:space="preserve">
     <value>This project powered by K-Shield Jr. A-09 team\nCopy left all right for you :)</value>
   </data>
-  <data name="aboutTitle" xml:space="preserve">
-    <value>About</value>
-  </data>
   <data name="appName" xml:space="preserve">
-    <value>Selenium SQLi Dector</value>
+    <value>Selenium SQLi Detector</value>
   </data>
   <data name="btnStart" xml:space="preserve">
     <value>Start</value>
@@ -179,5 +176,20 @@
   </data>
   <data name="waitForEnd" xml:space="preserve">
     <value>Starting process. Please wait for end.</value>
+  </data>
+  <data name="notFoundExecute" xml:space="preserve">
+    <value>Execite file not found. Start downloading</value>
+  </data>
+  <data name="webNo" xml:space="preserve">
+    <value>'s web driver not found. Please download web driver for your browser!</value>
+  </data>
+  <data name="webPath" xml:space="preserve">
+    <value>Download Path: </value>
+  </data>
+  <data name="doneCrawl" xml:space="preserve">
+    <value>Successfully done! But, failed to open output directory. Because it located on access denied path with application's permission.</value>
+  </data>
+  <data name="downPath" xml:space="preserve">
+    <value>Saved Path:</value>
   </data>
 </root>
