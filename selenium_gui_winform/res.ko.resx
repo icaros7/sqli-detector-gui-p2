@@ -177,4 +177,19 @@
   <data name="waitForEnd" xml:space="preserve">
     <value>프로세스를 시작 합니다. 잠시 기다려 주십시오.</value>
   </data>
+  <data name="notFoundExecute" xml:space="preserve">
+    <value>실행 파일을 찾을 수 없습니다. 다운로드를 시작 합니다.</value>
+  </data>
+  <data name="webNo" xml:space="preserve">
+    <value>의 웹 드라이버를 찾을 수 없습니다. 브라우저에 맞는 웹 드라이버를 다운로드 해주십시오!</value>
+  </data>
+  <data name="webPath" xml:space="preserve">
+    <value>다운로드 경로: </value>
+  </data>
+  <data name="doneCrawl" xml:space="preserve">
+    <value>성공적으로 마쳤습니다! 단, 출력 폴더가 권한 상 접근 불가능한 곳에 위치하여 폴더 열기에 실패 하였습니다.</value>
+  </data>
+  <data name="downPath" xml:space="preserve">
+    <value>저장 경로:</value>
+  </data>
 </root>
