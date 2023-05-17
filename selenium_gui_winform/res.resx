@@ -192,4 +192,10 @@
   <data name="downPath" xml:space="preserve">
     <value>Saved Path:</value>
   </data>
+  <data name="cbTag" xml:space="preserve">
+    <value>Search Tag(#)</value>
+  </data>
+  <data name="chgLangWhile" xml:space="preserve">
+    <value>Can't change language while working! Please do it later.</value>
+  </data>
 </root>

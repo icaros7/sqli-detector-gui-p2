@@ -29,6 +29,7 @@ namespace selenium_gui_winform {
             itemVersion.Text = res.itemVersion;
             groupBrowser.Text = res.groupBrowser;
             btnStart.Text = res.btnStart;
+            cbTag.Text = res.cbTag;
         }
 
         /// <summary>
@@ -195,6 +196,7 @@ namespace selenium_gui_winform {
                 textBox1.AppendText("\r\n" + @"[INFO] Start detection" + "\r\n");
                 textBox1.AppendText(@"Browser: " + _browser + "\r\n");
                 textBox1.AppendText(@"URL: " + tbURL.Text + "\r\n");
+                textBox1.AppendText(@"Tag: " + cbTag.Checked + "\r\n");
                 textBox1.AppendText(@"------------------------------" + "\r\n");
                 textBox1.AppendText(res.waitForEnd + "\r\n");
                 btnStart.Text = res.btnStop;
@@ -202,7 +204,7 @@ namespace selenium_gui_winform {
                 try {
                     Psi = new ProcessStartInfo {
                         FileName = @"python",
-                        Arguments = ".\\execute\\main.py --browser=\"" + _browser + "\" --url=\"" + tbURL.Text + "\"",
+                        Arguments = ".\\execute\\main.py --browser=\"" + _browser + "\" --url=\"" + tbURL.Text + "\" --tag=\"" + cbTag.Checked + "\"",
                         RedirectStandardOutput = true,
                         RedirectStandardError = true,
                         CreateNoWindow = true
@@ -238,6 +240,7 @@ namespace selenium_gui_winform {
         private void Form1_Load(object sender, EventArgs e) {
             if (Settings.Default.saveSettings) {
                 if (Settings.Default.saveSettings) { cbSave.Checked = true; }
+                if (Settings.Default.searchTag) { cbTag.Checked = true; }
                 tbURL.Text = Settings.Default.lastURL;
                 switch (Settings.Default.lastBrowser) {
                     case 0:
