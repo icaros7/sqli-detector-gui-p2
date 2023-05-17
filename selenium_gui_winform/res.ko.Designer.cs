@@ -105,11 +105,29 @@ namespace selenium_gui_winform {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 태그(#) 검색.
+        /// </summary>
+        public static string cbTag {
+            get {
+                return ResourceManager.GetString("cbTag", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 언어를 한국어로 바꾸었습니다..
         /// </summary>
         public static string changeLang {
             get {
                 return ResourceManager.GetString("changeLang", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 작업 중에는 언어를 바꿀 수 없습니다! 잠시 후 다시 시도 해 주십시오..
+        /// </summary>
+        public static string chgLangWhile {
+            get {
+                return ResourceManager.GetString("chgLangWhile", resourceCulture);
             }
         }
         

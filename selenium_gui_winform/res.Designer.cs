@@ -105,11 +105,29 @@ namespace selenium_gui_winform {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Search Tag(#).
+        /// </summary>
+        public static string cbTag {
+            get {
+                return ResourceManager.GetString("cbTag", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Successfully change language to English.
         /// </summary>
         public static string changeLang {
             get {
                 return ResourceManager.GetString("changeLang", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Can&apos;t change language while working! Please do it later..
+        /// </summary>
+        public static string chgLangWhile {
+            get {
+                return ResourceManager.GetString("chgLangWhile", resourceCulture);
             }
         }
         
@@ -195,7 +213,7 @@ namespace selenium_gui_winform {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Execite file not found. Start downloading.
+        ///   Looks up a localized string similar to Execute file not found. Start downloading.
         /// </summary>
         public static string notFoundExecute {
             get {

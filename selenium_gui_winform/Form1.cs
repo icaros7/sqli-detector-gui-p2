@@ -29,6 +29,7 @@ namespace selenium_gui_winform {
             itemVersion.Text = res.itemVersion;
             groupBrowser.Text = res.groupBrowser;
             btnStart.Text = res.btnStart;
+            cbTag.Text = res.cbTag;
         }
 
         /// <summary>
@@ -66,25 +67,25 @@ namespace selenium_gui_winform {
         private async void StartCall() {
             Proc.StartInfo = Psi;
             Proc.Start();
-            
+
             Proc.BeginOutputReadLine();
             Proc.BeginErrorReadLine();
 
-            Proc.OutputDataReceived += (sender, e) => textBox1.AppendText(e.Data + "\r\n");
-            Proc.ErrorDataReceived  += (sender, e) => textBox1.AppendText(e.Data + "\r\n");
-                    
+            Proc.OutputDataReceived += (sender, e) => textBox1.AppendText(e.Data + "\r");
+            Proc.ErrorDataReceived += (sender, e) => textBox1.AppendText(e.Data + "\r");
+
             await Proc.WaitForExitAsync();
-            
+
             Proc.CancelOutputRead();
             Proc.CancelErrorRead();
             Proc.Close();
-            
+
             textBox1.AppendText(@"[INFO] Finished." + "\r\n");
             btnStart.Text = res.btnStart;
-            
-            var reg     = new Regex(@"://(?<host>([a-z\d][-a-z\d]*[a-z\d]\.)*[a-z][-a-z\d]+[a-z])");
+
+            var reg = new Regex(@"://(?<host>([a-z\d][-a-z\d]*[a-z\d]\.)*[a-z][-a-z\d]+[a-z])");
             var workdir = Application.StartupPath + reg.Match(tbURL.Text).Result("${host}");
-            
+
             try {
                 Process.Start(workdir);
             }
@@ -95,14 +96,24 @@ namespace selenium_gui_winform {
 
 
         private void itemEng_Click(object sender, EventArgs e) {
-            Settings.Default.lastLang = @"en";
-            Settings.Default.Save();
+            if (btnStart.Text == res.btnStop) {
+                MessageBox.Show(res.chgLangWhile, res.error, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            if (Settings.Default.saveSettings) {
+                Settings.Default.lastLang = @"en";
+                Settings.Default.Save();
+            }
             itemEng.Checked = true;
             itemKor.Checked = false;
             ChangeLang("en");
         }
 
         private void itemKor_Click(object sender, EventArgs e) {
+            if (btnStart.Text == res.btnStop) {
+                MessageBox.Show(res.chgLangWhile, res.error, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
             if (Settings.Default.saveSettings) {
                 Settings.Default.lastLang = @"ko";
                 Settings.Default.Save();
@@ -195,6 +206,7 @@ namespace selenium_gui_winform {
                 textBox1.AppendText("\r\n" + @"[INFO] Start detection" + "\r\n");
                 textBox1.AppendText(@"Browser: " + _browser + "\r\n");
                 textBox1.AppendText(@"URL: " + tbURL.Text + "\r\n");
+                textBox1.AppendText(@"Tag: " + cbTag.Checked + "\r\n");
                 textBox1.AppendText(@"------------------------------" + "\r\n");
                 textBox1.AppendText(res.waitForEnd + "\r\n");
                 btnStart.Text = res.btnStop;
@@ -202,22 +214,15 @@ namespace selenium_gui_winform {
                 try {
                     Psi = new ProcessStartInfo {
                         FileName = @"python",
-                        Arguments = ".\\execute\\main.py --browser=\"" + _browser + "\" --url=\"" + tbURL.Text + "\"",
+                        Arguments = ".\\execute\\main.py --browser=\"" + _browser + "\" --url=\"" + tbURL.Text + "\" --tag=\"" + cbTag.Checked + "\"",
                         RedirectStandardOutput = true,
                         RedirectStandardError = true,
                         CreateNoWindow = true
                     };
 
-                    Proc                     = new Process();
+                    Proc = new Process();
                     Proc.EnableRaisingEvents = true;
 
-                    // Proc.OutputDataReceived += new DataReceivedEventHandler((sender, e) => {
-                    //     if (!string.IsNullOrEmpty(e.Data)) { textBox1.AppendText(e.Data + "\r\n"); }
-                    // });
-                    // Proc.ErrorDataReceived += new DataReceivedEventHandler((sender, e) => {
-                    //     if (!string.IsNullOrEmpty(e.Data)) { textBox1.AppendText(@"[ERROR] " + e.Data + "\r\n"); }
-                    // });
-            
                     StartCall();
                 }
                 catch (Exception ex) {
@@ -238,6 +243,7 @@ namespace selenium_gui_winform {
         private void Form1_Load(object sender, EventArgs e) {
             if (Settings.Default.saveSettings) {
                 if (Settings.Default.saveSettings) { cbSave.Checked = true; }
+                if (Settings.Default.searchTag) { cbTag.Checked = true; }
                 tbURL.Text = Settings.Default.lastURL;
                 switch (Settings.Default.lastBrowser) {
                     case 0:

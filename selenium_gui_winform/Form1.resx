@@ -84,7 +84,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;labelTarget.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="tbURL.Location" type="System.Drawing.Point, System.Drawing">
     <value>66, 25</value>
@@ -112,7 +112,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;tbURL.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="cbSave.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -142,13 +142,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;cbSave.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <metadata name="menuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
   <data name="itemExit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
+    <value>93, 22</value>
   </data>
   <data name="itemExit.Text" xml:space="preserve">
     <value>&amp;Exit</value>
@@ -159,11 +159,38 @@
   <data name="stripFile.Text" xml:space="preserve">
     <value>&amp;File</value>
   </data>
+  <data name="itemKor.Size" type="System.Drawing.Size, System.Drawing">
+    <value>112, 22</value>
+  </data>
+  <data name="itemKor.Text" xml:space="preserve">
+    <value>한국어</value>
+  </data>
+  <data name="itemEng.Size" type="System.Drawing.Size, System.Drawing">
+    <value>112, 22</value>
+  </data>
+  <data name="itemEng.Text" xml:space="preserve">
+    <value>English</value>
+  </data>
   <data name="stripLang.Size" type="System.Drawing.Size, System.Drawing">
     <value>71, 20</value>
   </data>
   <data name="stripLang.Text" xml:space="preserve">
     <value>&amp;Language</value>
+  </data>
+  <data name="itemVersion.Size" type="System.Drawing.Size, System.Drawing">
+    <value>148, 22</value>
+  </data>
+  <data name="itemVersion.Text" xml:space="preserve">
+    <value>Check Update</value>
+  </data>
+  <data name="itemBar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>145, 6</value>
+  </data>
+  <data name="itemAbout.Size" type="System.Drawing.Size, System.Drawing">
+    <value>148, 22</value>
+  </data>
+  <data name="itemAbout.Text" xml:space="preserve">
+    <value>About</value>
   </data>
   <data name="stripHelp.Size" type="System.Drawing.Size, System.Drawing">
     <value>44, 20</value>
@@ -196,112 +223,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;menuStrip.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="itemKor.Size" type="System.Drawing.Size, System.Drawing">
-    <value>112, 22</value>
-  </data>
-  <data name="itemKor.Text" xml:space="preserve">
-    <value>한국어</value>
-  </data>
-  <data name="itemEng.Size" type="System.Drawing.Size, System.Drawing">
-    <value>112, 22</value>
-  </data>
-  <data name="itemEng.Text" xml:space="preserve">
-    <value>English</value>
-  </data>
-  <data name="itemVersion.Size" type="System.Drawing.Size, System.Drawing">
-    <value>148, 22</value>
-  </data>
-  <data name="itemVersion.Text" xml:space="preserve">
-    <value>Check Update</value>
-  </data>
-  <data name="itemBar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>145, 6</value>
-  </data>
-  <data name="itemAbout.Size" type="System.Drawing.Size, System.Drawing">
-    <value>148, 22</value>
-  </data>
-  <data name="itemAbout.Text" xml:space="preserve">
-    <value>About</value>
-  </data>
-  <data name="&gt;&gt;radioOpera.Name" xml:space="preserve">
-    <value>radioOpera</value>
-  </data>
-  <data name="&gt;&gt;radioOpera.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;radioOpera.Parent" xml:space="preserve">
-    <value>groupBrowser</value>
-  </data>
-  <data name="&gt;&gt;radioOpera.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;radioFirefox.Name" xml:space="preserve">
-    <value>radioFirefox</value>
-  </data>
-  <data name="&gt;&gt;radioFirefox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;radioFirefox.Parent" xml:space="preserve">
-    <value>groupBrowser</value>
-  </data>
-  <data name="&gt;&gt;radioFirefox.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;radioChrome.Name" xml:space="preserve">
-    <value>radioChrome</value>
-  </data>
-  <data name="&gt;&gt;radioChrome.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;radioChrome.Parent" xml:space="preserve">
-    <value>groupBrowser</value>
-  </data>
-  <data name="&gt;&gt;radioChrome.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;radioEdge.Name" xml:space="preserve">
-    <value>radioEdge</value>
-  </data>
-  <data name="&gt;&gt;radioEdge.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;radioEdge.Parent" xml:space="preserve">
-    <value>groupBrowser</value>
-  </data>
-  <data name="&gt;&gt;radioEdge.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="groupBrowser.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 47</value>
-  </data>
-  <data name="groupBrowser.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="groupBrowser.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="groupBrowser.Size" type="System.Drawing.Size, System.Drawing">
-    <value>314, 40</value>
-  </data>
-  <data name="groupBrowser.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="groupBrowser.Text" xml:space="preserve">
-    <value>Select Brower</value>
-  </data>
-  <data name="&gt;&gt;groupBrowser.Name" xml:space="preserve">
-    <value>groupBrowser</value>
-  </data>
-  <data name="&gt;&gt;groupBrowser.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBrowser.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;groupBrowser.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>7</value>
   </data>
   <data name="radioOpera.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -436,6 +358,36 @@
   <data name="&gt;&gt;radioEdge.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <data name="groupBrowser.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 47</value>
+  </data>
+  <data name="groupBrowser.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="groupBrowser.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="groupBrowser.Size" type="System.Drawing.Size, System.Drawing">
+    <value>314, 40</value>
+  </data>
+  <data name="groupBrowser.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="groupBrowser.Text" xml:space="preserve">
+    <value>Select Brower</value>
+  </data>
+  <data name="&gt;&gt;groupBrowser.Name" xml:space="preserve">
+    <value>groupBrowser</value>
+  </data>
+  <data name="&gt;&gt;groupBrowser.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBrowser.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;groupBrowser.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
   <data name="btnStart.Location" type="System.Drawing.Point, System.Drawing">
     <value>242, 92</value>
   </data>
@@ -461,7 +413,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnStart.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="textBox1.Location" type="System.Drawing.Point, System.Drawing">
     <value>10, 120</value>
@@ -491,6 +443,33 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;textBox1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="cbTag.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="cbTag.Location" type="System.Drawing.Point, System.Drawing">
+    <value>133, 96</value>
+  </data>
+  <data name="cbTag.Size" type="System.Drawing.Size, System.Drawing">
+    <value>106, 16</value>
+  </data>
+  <data name="cbTag.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="cbTag.Text" xml:space="preserve">
+    <value>Search Tag(#)</value>
+  </data>
+  <data name="&gt;&gt;cbTag.Name" xml:space="preserve">
+    <value>cbTag</value>
+  </data>
+  <data name="&gt;&gt;cbTag.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cbTag.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;cbTag.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

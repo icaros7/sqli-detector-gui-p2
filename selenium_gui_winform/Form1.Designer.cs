@@ -44,6 +44,7 @@
             radioEdge = new RadioButton();
             btnStart = new Button();
             textBox1 = new TextBox();
+            cbTag = new CheckBox();
             menuStrip.SuspendLayout();
             groupBrowser.SuspendLayout();
             SuspendLayout();
@@ -182,10 +183,17 @@
             textBox1.Name = "textBox1";
             textBox1.ReadOnly = true;
             // 
+            // cbTag
+            // 
+            resources.ApplyResources(cbTag, "cbTag");
+            cbTag.Name = "cbTag";
+            cbTag.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(cbTag);
             Controls.Add(textBox1);
             Controls.Add(btnStart);
             Controls.Add(groupBrowser);
@@ -228,5 +236,6 @@
         private RadioButton radioEdge;
         private Button btnStart;
         private TextBox textBox1;
+        private CheckBox cbTag;
     }
 }
