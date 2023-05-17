@@ -304,7 +304,7 @@ namespace selenium_gui_winform {
             try {
                 WebClient wc = new WebClient();
                 wc.Encoding = Encoding.UTF8;
-                int.TryParse(wc.DownloadString(@"https://raw.githubusercontent.com/ksj-10th-a09/selenium_crawl_p1/main/version.txt").Replace(".", ""), out version);
+                int.TryParse(wc.DownloadString(@"https://raw.githubusercontent.com/ksj-10th-a09/sqli-detection-gui/main/version.txt").Replace(".", ""), out version);
             }
             catch (Exception ex) {
                 MessageBox.Show(ex.ToString() + "\r\n" + @"Please contact to support team.", @"Error", MessageBoxButtons.OK, MessageBoxIcon.Error); return;
