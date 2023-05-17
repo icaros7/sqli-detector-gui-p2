@@ -213,7 +213,7 @@ namespace selenium_gui_winform {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Execite file not found. Start downloading.
+        ///   Looks up a localized string similar to Execute file not found. Start downloading.
         /// </summary>
         public static string notFoundExecute {
             get {

@@ -8,7 +8,12 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <RepositoryUrl>https://github.com/icaros7/sqli-detection-gui</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
+    <PublishSingleFile>true</PublishSingleFile>
     <Version>1.0.0</Version>
+    <Title>Selenium SQLi Detector</Title>
+    <Authors>K-Shield Jr. 10th A-09</Authors>
+    <Company>K-Shield Jr. 10th A-09</Company>
+    <Description>SQLi Detector</Description>
   </PropertyGroup>
 
   <ItemGroup>

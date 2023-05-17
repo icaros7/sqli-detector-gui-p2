@@ -178,7 +178,7 @@
     <value>Starting process. Please wait for end.</value>
   </data>
   <data name="notFoundExecute" xml:space="preserve">
-    <value>Execite file not found. Start downloading</value>
+    <value>Execute file not found. Start downloading</value>
   </data>
   <data name="webNo" xml:space="preserve">
     <value>'s web driver not found. Please download web driver for your browser!</value>
