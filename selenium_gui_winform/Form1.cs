@@ -151,7 +151,7 @@ namespace selenium_gui_winform {
             Proc.BeginOutputReadLine();
             Proc.BeginErrorReadLine();
 
-            Proc.OutputDataReceived += (sender, e) => textBox1.AppendText(e.Data + "\r");
+            Proc.OutputDataReceived += (sender, e) => textBox1.AppendText(e.Data + "\r\n");
             Proc.ErrorDataReceived += (sender, e) => {
                 if (e.Data == @"ModuleNotFoundError: No module named 'selenium'") {
                     if (MessageBox.Show(res.seleniumNotFound, res.information, MessageBoxButtons.OKCancel,
@@ -160,7 +160,7 @@ namespace selenium_gui_winform {
                     }
                     else { return; }
                 }
-                textBox1.AppendText(e.Data + "\r");
+                textBox1.AppendText(e.Data + "\r\n");
             };
 
             await Proc.WaitForExitAsync();
