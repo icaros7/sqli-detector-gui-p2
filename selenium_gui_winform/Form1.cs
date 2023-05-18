@@ -262,33 +262,37 @@ namespace selenium_gui_winform {
 
             // Check main.py exist
             if (!CheckExecuteExist()) {
-                textBox1.AppendText(res.notFoundExecute);
-
-                //TODO: Split download application
                 try {
-                    Directory.CreateDirectory(Application.StartupPath + @"\execute");
-                    WebClient wc = new WebClient();
-                    wc.DownloadFile(
-                        "https://github.com/ksj-10th-a09/selenium_crawl_p1/releases/latest/download/main.py",
-                        @".\execute\main.py");
-                    wc.DownloadFile(
-                        "https://github.com/ksj-10th-a09/selenium_crawl_p1/releases/latest/download/crawler.py",
-                        @".\execute\crawler.py");
-                    wc.DownloadFile(
-                        "https://github.com/ksj-10th-a09/selenium_crawl_p1/releases/latest/download/get_html.py",
-                        @".\execute\get_html.py");
-                }
-                catch (Exception ex) {
-                    MessageBox.Show(ex.ToString(), res.error, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    var verFile = Path.Combine(Application.StartupPath, @"\execute\version.txt");
+                    var version = File.ReadAllLines(verFile);
 
-                    return;
+                    if (version.Length > 0 && version[0] != UpdateExecute(1)) {
+                        UpdateExecute(0);
+                    }
+                }
+
+                catch (IOException) {
+                    textBox1.AppendText(@"ERROR: Can't read version information.");
+                    UpdateExecute(0);
                 }
             }
 
             if (!CheckWebDriverExist()) {
-                MessageBox.Show(_browser + res.webNo + "\n\n" + res.webPath + Application.StartupPath, res.information,
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
+                if (MessageBox.Show(_browser + res.webNo + "\n\n" + res.webPath + Application.StartupPath + "\n\n" +
+                                    res.webOpen, res.information, MessageBoxButtons.YesNo, MessageBoxIcon.Question
+                    ) != DialogResult.Yes) return;
+                switch (_browser) {
+                    case "Edge":
+                        Process.Start(
+                            "@explorer https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/");
+                        break;
+                    case "Chrome":
+                        Process.Start(@"explorer https://chromedriver.chromium.org/downloads");
+                        break;
+                    case "Firefox":
+                        Process.Start(@"explorer https://github.com/mozilla/geckodriver/releases");
+                        break;
+                }
             }
 
             if (btnStart.Text == res.btnStart) {
