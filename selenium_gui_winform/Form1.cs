@@ -145,6 +145,7 @@ namespace selenium_gui_winform {
         /// Async method for start crawling via python
         /// </summary>
         private async void StartCall() {
+            if (Proc == null || Psi == null) return;
             Proc.StartInfo = Psi;
             Proc.Start();
 
