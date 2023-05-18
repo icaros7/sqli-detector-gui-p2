@@ -9,8 +9,8 @@ using System.Text.RegularExpressions;
 namespace selenium_gui_winform {
     public partial class Form1 : Form {
         private string _browser = @"Edge";
-        public static ProcessStartInfo? Psi = null;
-        public static Process? Proc = null;
+        private static ProcessStartInfo? Psi;
+        private static Process? Proc;
 
         public Form1() {
             InitializeComponent();
@@ -141,6 +141,9 @@ namespace selenium_gui_winform {
             LangInit();
         }
 
+        /// <summary>
+        /// Async method for start crawling via python
+        /// </summary>
         private async void StartCall() {
             Proc.StartInfo = Psi;
             Proc.Start();
@@ -167,10 +170,10 @@ namespace selenium_gui_winform {
                 Process.Start(workdir);
             }
             catch (Win32Exception) {
-                MessageBox.Show(res.doneCrawl + "\n\n" + res.downPath + workdir, res.information, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(res.doneCrawl + "\n\n" + res.downPath + workdir, res.information, MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
             }
         }
-
 
         private void itemEng_Click(object sender, EventArgs e) {
             if (btnStart.Text == res.btnStop) {
