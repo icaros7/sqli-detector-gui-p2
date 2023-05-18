@@ -16,6 +16,82 @@ namespace selenium_gui_winform {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Execute python file update method
+        /// </summary>
+        /// <param name="mode">0: Download, 1: Check</param>
+        /// <returns></returns>
+        private string UpdateExecute(int mode) {
+            if (mode == 0) { // 0: Download latest file
+                textBox1.AppendText(res.notFoundExecute);
+
+                try {
+                    var path = Path.Combine(Application.StartupPath, @"execute");
+                    if (Directory.Exists(path)) {
+                        Directory.Delete(path, true);
+                    }
+                    Directory.CreateDirectory(path);
+
+                    WebClient wc = new WebClient();
+                    wc.DownloadFile(
+                        "https://github.com/ksj-10th-a09/selenium_crawl_p1/releases/latest/download/main.py",
+                        path + @"\main.py");
+                    wc.DownloadFile(
+                        "https://github.com/ksj-10th-a09/selenium_crawl_p1/releases/latest/download/crawler.py",
+                        path + @"\crawler.py");
+                    wc.DownloadFile(
+                        "https://github.com/ksj-10th-a09/selenium_crawl_p1/releases/latest/download/get_html.py",
+                        path + @"\get_html.py");
+                    wc.DownloadFile(@"https://raw.githubusercontent.com/ksj-10th-a09/selenium_crawl_p1/main/version.txt",
+                        path + @"\version.txt");
+                }
+                catch (IOException) {
+                    textBox1.AppendText(@"ERROR: Old file delete or download failed.");
+                    return "-1";
+                }
+                catch (Exception ex) {
+                    MessageBox.Show(ex.ToString(), res.error, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return "-1";
+                }
+
+                return "";
+            }
+
+            if (mode == 1) { // 1: Check Update
+                // Parsing version text
+                var version = 0;
+                string versionStr;
+                try {
+                    WebClient wc = new WebClient();
+                    wc.Encoding = Encoding.UTF8;
+                    versionStr =
+                        wc.DownloadString(
+                            @"https://raw.githubusercontent.com/ksj-10th-a09/selenium_crawl_p1/main/version.txt");
+                    int.TryParse(versionStr.Replace(".", ""), out version);
+                }
+                catch (Exception ex) {
+                    MessageBox.Show(ex + "\r\n" + @"Please contact to support team.", @"Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return "-1";
+                }
+                if (version == 0) {
+                    MessageBox.Show(res.updateFail, res.error, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return "-1";
+                }
+                if (version > int.Parse(Application.ProductVersion.Replace(".", ""))) {
+                    if (MessageBox.Show(res.updateNew, res.information, MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK) {
+                        UpdateExecute(0);
+                    }
+                }
+                else {
+                    MessageBox.Show(res.updateNoNeed, res.information, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
+                return version.ToString();
+            }
+
+            return "-1";
+        }
+
         private void LangInit() {
             // Apply Localization
             Text = res.appName;
@@ -27,6 +103,7 @@ namespace selenium_gui_winform {
             itemAbout.Text = res.itemAbout;
             itemExit.Text = res.itemExit;
             itemVersion.Text = res.itemVersion;
+            itemVersionGUI.Text = res.itemVersionGUI;
             groupBrowser.Text = res.groupBrowser;
             btnStart.Text = res.btnStart;
             cbTag.Text = res.cbTag;
@@ -37,10 +114,10 @@ namespace selenium_gui_winform {
         /// </summary>
         /// <returns>bool Exist or not</returns>
         private static bool CheckExecuteExist() {
-            string path = Application.StartupPath;
+            var path = Path.Combine(Application.StartupPath, @"execute");
 
-            return File.Exists(path + @"\execute\main.py") && File.Exists(path + @"\execute\get_html.py") &&
-                    File.Exists(path + @"\execute\crawler.py");
+            return File.Exists(path + @"\main.py") && File.Exists(path + @"\get_html.py") &&
+                    File.Exists(path + @"\crawler.py");
         }
 
         /// <summary>
@@ -300,20 +377,26 @@ namespace selenium_gui_winform {
         /// </summary>
         private void itemVersion_Click(object sender, EventArgs e) {
             // Parsing version text
-            int version = 0;
+            string versionStr = "";
+            var version = 0;
             try {
                 WebClient wc = new WebClient();
                 wc.Encoding = Encoding.UTF8;
-                int.TryParse(wc.DownloadString(@"https://raw.githubusercontent.com/ksj-10th-a09/sqli-detection-gui/main/version.txt").Replace(".", ""), out version);
+                versionStr = wc.DownloadString(
+                    @"https://raw.githubusercontent.com/ksj-10th-a09/sqli-detection-gui/main/version.txt");
+                int.TryParse(versionStr.Replace(".", ""), out version);
             }
             catch (Exception ex) {
-                MessageBox.Show(ex.ToString() + "\r\n" + @"Please contact to support team.", @"Error", MessageBoxButtons.OK, MessageBoxIcon.Error); return;
+                MessageBox.Show(ex.ToString() + "\r\n" + @"Please contact to support team.", @"Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error); return;
             }
             finally {
                 if (version == 0) { MessageBox.Show(res.updateFail, res.error, MessageBoxButtons.OK, MessageBoxIcon.Error); }
                 if (version > int.Parse(Application.ProductVersion.Replace(".", ""))) {
-                    if (MessageBox.Show(res.updateNew, res.information, MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK) {
-                        // TODO: Update download func
+                    if (MessageBox.Show(res.updateNew + "\n\n" + res.currentVersion + Application.ProductVersion + "\n" +
+                                        res.newVersion + versionStr, res.information, MessageBoxButtons.OKCancel,
+                            MessageBoxIcon.Question) == DialogResult.OK) {
+                        UpdateExecute(0);
                     }
                 }
                 else {

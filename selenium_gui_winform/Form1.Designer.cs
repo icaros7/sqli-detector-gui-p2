@@ -45,6 +45,7 @@
             btnStart = new Button();
             textBox1 = new TextBox();
             cbTag = new CheckBox();
+            itemVersionGUI = new ToolStripMenuItem();
             menuStrip.SuspendLayout();
             groupBrowser.SuspendLayout();
             SuspendLayout();
@@ -109,7 +110,7 @@
             // 
             // stripHelp
             // 
-            stripHelp.DropDownItems.AddRange(new ToolStripItem[] { itemVersion, itemBar, itemAbout });
+            stripHelp.DropDownItems.AddRange(new ToolStripItem[] { itemVersion, itemVersionGUI, itemBar, itemAbout });
             stripHelp.Name = "stripHelp";
             resources.ApplyResources(stripHelp, "stripHelp");
             // 
@@ -189,6 +190,11 @@
             cbTag.Name = "cbTag";
             cbTag.UseVisualStyleBackColor = true;
             // 
+            // itemVersionGUI
+            // 
+            itemVersionGUI.Name = "itemVersionGUI";
+            resources.ApplyResources(itemVersionGUI, "itemVersionGUI");
+            // 
             // Form1
             // 
             resources.ApplyResources(this, "$this");
@@ -237,5 +243,6 @@
         private Button btnStart;
         private TextBox textBox1;
         private CheckBox cbTag;
+        private ToolStripMenuItem itemVersionGUI;
     }
 }

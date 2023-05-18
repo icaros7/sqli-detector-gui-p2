@@ -151,7 +151,7 @@
     <value>Exit</value>
   </data>
   <data name="itemVersion" xml:space="preserve">
-    <value>Check update</value>
+    <value>Check update Script</value>
   </data>
   <data name="labelTarget" xml:space="preserve">
     <value>Target</value>
@@ -197,5 +197,20 @@
   </data>
   <data name="chgLangWhile" xml:space="preserve">
     <value>Can't change language while working! Please do it later.</value>
+  </data>
+  <data name="seleniumNotFound" xml:space="preserve">
+    <value>Pip module 'selenium' was not found. Install pip module. Start downloading that module for PATH python.</value>
+  </data>
+  <data name="webOpen" xml:space="preserve">
+    <value>If click 'OK', open download page with default browser.</value>
+  </data>
+  <data name="currentVersion" xml:space="preserve">
+    <value>Current version: </value>
+  </data>
+  <data name="newVersion" xml:space="preserve">
+    <value>New version: </value>
+  </data>
+  <data name="itemVersionGUI" xml:space="preserve">
+    <value>Check update App</value>
   </data>
 </root>
