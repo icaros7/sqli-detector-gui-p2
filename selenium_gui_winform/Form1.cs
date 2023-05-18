@@ -284,7 +284,7 @@ namespace selenium_gui_winform {
                 switch (_browser) {
                     case "Edge":
                         Process.Start(
-                            "@explorer https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/");
+                            @"explorer https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/");
                         break;
                     case "Chrome":
                         Process.Start(@"explorer https://chromedriver.chromium.org/downloads");
