@@ -284,13 +284,13 @@ namespace selenium_gui_winform {
                 switch (_browser) {
                     case "Edge":
                         Process.Start(
-                            @"explorer https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/");
+                            @"https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/");
                         break;
                     case "Chrome":
-                        Process.Start(@"explorer https://chromedriver.chromium.org/downloads");
+                        Process.Start(@"https://chromedriver.chromium.org/downloads");
                         break;
                     case "Firefox":
-                        Process.Start(@"explorer https://github.com/mozilla/geckodriver/releases");
+                        Process.Start(@"https://github.com/mozilla/geckodriver/releases");
                         break;
                 }
             }
