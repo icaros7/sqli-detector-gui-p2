@@ -5,7 +5,7 @@ using System.IO.Compression;
 namespace Selenium_gui_updater {
     class Program {
         static int Main(string[] args) {
-            var path = args[1];
+            var path = args[0];
             // Try to download latest zip from repo
             try {
                 Process.Start(@"taskkill -f -im selenium_gui_winform.exe");
@@ -19,7 +19,7 @@ namespace Selenium_gui_updater {
                     path + @"\selenium_gui_Win32.zip");
             }
             catch (Exception ex) {
-                Console.WriteLine(@"ERR: {ex}");
+                Console.WriteLine(@"ERR: {ex}", ex);
                 Console.WriteLine(@"Please Check your internet connection");
                 return -1;
             }

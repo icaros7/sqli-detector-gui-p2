@@ -151,7 +151,7 @@ namespace selenium_gui_winform {
             Proc.BeginOutputReadLine();
             Proc.BeginErrorReadLine();
 
-            Proc.OutputDataReceived += (sender, e) => textBox1.AppendText(e.Data + "\r");
+            Proc.OutputDataReceived += (sender, e) => textBox1.AppendText(e.Data + "\r\n");
             Proc.ErrorDataReceived += (sender, e) => {
                 if (e.Data == @"ModuleNotFoundError: No module named 'selenium'") {
                     if (MessageBox.Show(res.seleniumNotFound, res.information, MessageBoxButtons.OKCancel,
@@ -160,7 +160,7 @@ namespace selenium_gui_winform {
                     }
                     else { return; }
                 }
-                textBox1.AppendText(e.Data + "\r");
+                textBox1.AppendText(e.Data + "\r\n");
             };
 
             await Proc.WaitForExitAsync();
@@ -284,13 +284,13 @@ namespace selenium_gui_winform {
                 switch (_browser) {
                     case "Edge":
                         Process.Start(
-                            "@explorer https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/");
+                            @"https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/");
                         break;
                     case "Chrome":
-                        Process.Start(@"explorer https://chromedriver.chromium.org/downloads");
+                        Process.Start(@"https://chromedriver.chromium.org/downloads");
                         break;
                     case "Firefox":
-                        Process.Start(@"explorer https://github.com/mozilla/geckodriver/releases");
+                        Process.Start(@"https://github.com/mozilla/geckodriver/releases");
                         break;
                 }
             }
