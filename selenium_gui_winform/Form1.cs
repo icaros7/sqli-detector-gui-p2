@@ -9,11 +9,87 @@ using System.Text.RegularExpressions;
 namespace selenium_gui_winform {
     public partial class Form1 : Form {
         private string _browser = @"Edge";
-        public static ProcessStartInfo? Psi = null;
-        public static Process? Proc = null;
+        private static ProcessStartInfo? Psi;
+        private static Process? Proc;
 
         public Form1() {
             InitializeComponent();
+        }
+
+        /// <summary>
+        /// Execute python file update method
+        /// </summary>
+        /// <param name="mode">0: Download, 1: Check</param>
+        /// <returns></returns>
+        private string UpdateExecute(int mode) {
+            if (mode == 0) { // 0: Download latest file
+                textBox1.AppendText(res.notFoundExecute);
+
+                try {
+                    var path = Path.Combine(Application.StartupPath, @"execute");
+                    if (Directory.Exists(path)) {
+                        Directory.Delete(path, true);
+                    }
+                    Directory.CreateDirectory(path);
+
+                    WebClient wc = new WebClient();
+                    wc.DownloadFile(
+                        "https://github.com/ksj-10th-a09/selenium_crawl_p1/releases/latest/download/main.py",
+                        path + @"\main.py");
+                    wc.DownloadFile(
+                        "https://github.com/ksj-10th-a09/selenium_crawl_p1/releases/latest/download/crawler.py",
+                        path + @"\crawler.py");
+                    wc.DownloadFile(
+                        "https://github.com/ksj-10th-a09/selenium_crawl_p1/releases/latest/download/get_html.py",
+                        path + @"\get_html.py");
+                    wc.DownloadFile(@"https://raw.githubusercontent.com/ksj-10th-a09/selenium_crawl_p1/main/version.txt",
+                        path + @"\version.txt");
+                }
+                catch (IOException) {
+                    textBox1.AppendText(@"ERROR: Old file delete or download failed.");
+                    return "-1";
+                }
+                catch (Exception ex) {
+                    MessageBox.Show(ex.ToString(), res.error, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return "-1";
+                }
+
+                return "";
+            }
+
+            if (mode == 1) { // 1: Check Update
+                // Parsing version text
+                var version = 0;
+                string versionStr;
+                try {
+                    WebClient wc = new WebClient();
+                    wc.Encoding = Encoding.UTF8;
+                    versionStr =
+                        wc.DownloadString(
+                            @"https://raw.githubusercontent.com/ksj-10th-a09/selenium_crawl_p1/main/version.txt");
+                    int.TryParse(versionStr.Replace(".", ""), out version);
+                }
+                catch (Exception ex) {
+                    MessageBox.Show(ex + "\r\n" + @"Please contact to support team.", @"Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return "-1";
+                }
+                if (version == 0) {
+                    MessageBox.Show(res.updateFail, res.error, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return "-1";
+                }
+                if (version > int.Parse(Application.ProductVersion.Replace(".", ""))) {
+                    if (MessageBox.Show(res.updateNew, res.information, MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK) {
+                        UpdateExecute(0);
+                    }
+                }
+                else {
+                    MessageBox.Show(res.updateNoNeed, res.information, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
+                return version.ToString();
+            }
+
+            return "-1";
         }
 
         private void LangInit() {
@@ -27,6 +103,7 @@ namespace selenium_gui_winform {
             itemAbout.Text = res.itemAbout;
             itemExit.Text = res.itemExit;
             itemVersion.Text = res.itemVersion;
+            itemVersionGUI.Text = res.itemVersionGUI;
             groupBrowser.Text = res.groupBrowser;
             btnStart.Text = res.btnStart;
             cbTag.Text = res.cbTag;
@@ -37,10 +114,10 @@ namespace selenium_gui_winform {
         /// </summary>
         /// <returns>bool Exist or not</returns>
         private static bool CheckExecuteExist() {
-            string path = Application.StartupPath;
+            var path = Path.Combine(Application.StartupPath, @"execute");
 
-            return File.Exists(path + @"\execute\main.py") && File.Exists(path + @"\execute\get_html.py") &&
-                    File.Exists(path + @"\execute\crawler.py");
+            return File.Exists(path + @"\main.py") && File.Exists(path + @"\get_html.py") &&
+                    File.Exists(path + @"\crawler.py");
         }
 
         /// <summary>
@@ -64,6 +141,9 @@ namespace selenium_gui_winform {
             LangInit();
         }
 
+        /// <summary>
+        /// Async method for start crawling via python
+        /// </summary>
         private async void StartCall() {
             Proc.StartInfo = Psi;
             Proc.Start();
@@ -72,7 +152,16 @@ namespace selenium_gui_winform {
             Proc.BeginErrorReadLine();
 
             Proc.OutputDataReceived += (sender, e) => textBox1.AppendText(e.Data + "\r");
-            Proc.ErrorDataReceived += (sender, e) => textBox1.AppendText(e.Data + "\r");
+            Proc.ErrorDataReceived += (sender, e) => {
+                if (e.Data == @"ModuleNotFoundError: No module named 'selenium'") {
+                    if (MessageBox.Show(res.seleniumNotFound, res.information, MessageBoxButtons.OKCancel,
+                            MessageBoxIcon.Question) == DialogResult.OK) {
+                        Process.Start(@"python -m pip install selenium");
+                    }
+                    else { return; }
+                }
+                textBox1.AppendText(e.Data + "\r");
+            };
 
             await Proc.WaitForExitAsync();
 
@@ -90,10 +179,10 @@ namespace selenium_gui_winform {
                 Process.Start(workdir);
             }
             catch (Win32Exception) {
-                MessageBox.Show(res.doneCrawl + "\n\n" + res.downPath + workdir, res.information, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(res.doneCrawl + "\n\n" + res.downPath + workdir, res.information, MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
             }
         }
-
 
         private void itemEng_Click(object sender, EventArgs e) {
             if (btnStart.Text == res.btnStop) {
@@ -173,33 +262,37 @@ namespace selenium_gui_winform {
 
             // Check main.py exist
             if (!CheckExecuteExist()) {
-                textBox1.AppendText(res.notFoundExecute);
-
-                //TODO: Split download application
                 try {
-                    Directory.CreateDirectory(Application.StartupPath + @"\execute");
-                    WebClient wc = new WebClient();
-                    wc.DownloadFile(
-                        "https://github.com/ksj-10th-a09/selenium_crawl_p1/releases/latest/download/main.py",
-                        @".\execute\main.py");
-                    wc.DownloadFile(
-                        "https://github.com/ksj-10th-a09/selenium_crawl_p1/releases/latest/download/crawler.py",
-                        @".\execute\crawler.py");
-                    wc.DownloadFile(
-                        "https://github.com/ksj-10th-a09/selenium_crawl_p1/releases/latest/download/get_html.py",
-                        @".\execute\get_html.py");
-                }
-                catch (Exception ex) {
-                    MessageBox.Show(ex.ToString(), res.error, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    var verFile = Path.Combine(Application.StartupPath, @"\execute\version.txt");
+                    var version = File.ReadAllLines(verFile);
 
-                    return;
+                    if (version.Length > 0 && version[0] != UpdateExecute(1)) {
+                        UpdateExecute(0);
+                    }
+                }
+
+                catch (IOException) {
+                    textBox1.AppendText(@"ERROR: Can't read version information.");
+                    UpdateExecute(0);
                 }
             }
 
             if (!CheckWebDriverExist()) {
-                MessageBox.Show(_browser + res.webNo + "\n\n" + res.webPath + Application.StartupPath, res.information,
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
+                if (MessageBox.Show(_browser + res.webNo + "\n\n" + res.webPath + Application.StartupPath + "\n\n" +
+                                    res.webOpen, res.information, MessageBoxButtons.YesNo, MessageBoxIcon.Question
+                    ) != DialogResult.Yes) return;
+                switch (_browser) {
+                    case "Edge":
+                        Process.Start(
+                            "@explorer https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/");
+                        break;
+                    case "Chrome":
+                        Process.Start(@"explorer https://chromedriver.chromium.org/downloads");
+                        break;
+                    case "Firefox":
+                        Process.Start(@"explorer https://github.com/mozilla/geckodriver/releases");
+                        break;
+                }
             }
 
             if (btnStart.Text == res.btnStart) {
@@ -300,20 +393,26 @@ namespace selenium_gui_winform {
         /// </summary>
         private void itemVersion_Click(object sender, EventArgs e) {
             // Parsing version text
-            int version = 0;
+            string versionStr = "";
+            var version = 0;
             try {
                 WebClient wc = new WebClient();
                 wc.Encoding = Encoding.UTF8;
-                int.TryParse(wc.DownloadString(@"https://raw.githubusercontent.com/ksj-10th-a09/sqli-detection-gui/main/version.txt").Replace(".", ""), out version);
+                versionStr = wc.DownloadString(
+                    @"https://raw.githubusercontent.com/ksj-10th-a09/sqli-detection-gui/main/version.txt");
+                int.TryParse(versionStr.Replace(".", ""), out version);
             }
             catch (Exception ex) {
-                MessageBox.Show(ex.ToString() + "\r\n" + @"Please contact to support team.", @"Error", MessageBoxButtons.OK, MessageBoxIcon.Error); return;
+                MessageBox.Show(ex.ToString() + "\r\n" + @"Please contact to support team.", @"Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error); return;
             }
             finally {
                 if (version == 0) { MessageBox.Show(res.updateFail, res.error, MessageBoxButtons.OK, MessageBoxIcon.Error); }
                 if (version > int.Parse(Application.ProductVersion.Replace(".", ""))) {
-                    if (MessageBox.Show(res.updateNew, res.information, MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK) {
-                        // TODO: Update download func
+                    if (MessageBox.Show(res.updateNew + "\n\n" + res.currentVersion + Application.ProductVersion + "\n" +
+                                        res.newVersion + versionStr, res.information, MessageBoxButtons.OKCancel,
+                            MessageBoxIcon.Question) == DialogResult.OK) {
+                        UpdateExecute(0);
                     }
                 }
                 else {

@@ -132,6 +132,15 @@ namespace selenium_gui_winform {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 현재 버전: .
+        /// </summary>
+        public static string currentVersion {
+            get {
+                return ResourceManager.GetString("currentVersion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 성공적으로 마쳤습니다! 단, 출력 폴더가 권한 상 접근 불가능한 곳에 위치하여 폴더 열기에 실패 하였습니다..
         /// </summary>
         public static string doneCrawl {
@@ -195,11 +204,20 @@ namespace selenium_gui_winform {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 업데이트 확인.
+        ///   Looks up a localized string similar to 스크립트 업데이트 확인.
         /// </summary>
         public static string itemVersion {
             get {
                 return ResourceManager.GetString("itemVersion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 앱 업데이트 확인.
+        /// </summary>
+        public static string itemVersionGUI {
+            get {
+                return ResourceManager.GetString("itemVersionGUI", resourceCulture);
             }
         }
         
@@ -213,11 +231,29 @@ namespace selenium_gui_winform {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 새 버전: .
+        /// </summary>
+        public static string newVersion {
+            get {
+                return ResourceManager.GetString("newVersion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 실행 파일을 찾을 수 없습니다. 다운로드를 시작 합니다..
         /// </summary>
         public static string notFoundExecute {
             get {
                 return ResourceManager.GetString("notFoundExecute", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pip 모듈 &apos;selenium&apos;을 찾을 수 없습니다. PATH에 등록된 python으로 다운로드를 시작 합니다..
+        /// </summary>
+        public static string seleniumNotFound {
+            get {
+                return ResourceManager.GetString("seleniumNotFound", resourceCulture);
             }
         }
         
@@ -290,6 +326,15 @@ namespace selenium_gui_winform {
         public static string webNo {
             get {
                 return ResourceManager.GetString("webNo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &apos;예&apos;를 클릭 하는 경우 기본 브라우저로 다운로드 페이지를 엽니다..
+        /// </summary>
+        public static string webOpen {
+            get {
+                return ResourceManager.GetString("webOpen", resourceCulture);
             }
         }
         

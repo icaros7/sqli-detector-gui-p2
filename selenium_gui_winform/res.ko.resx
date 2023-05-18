@@ -151,7 +151,7 @@
     <value>종료</value>
   </data>
   <data name="itemVersion" xml:space="preserve">
-    <value>업데이트 확인</value>
+    <value>스크립트 업데이트 확인</value>
   </data>
   <data name="labelTarget" xml:space="preserve">
     <value>대상</value>
@@ -197,5 +197,20 @@
   </data>
   <data name="chgLangWhile" xml:space="preserve">
     <value>작업 중에는 언어를 바꿀 수 없습니다! 잠시 후 다시 시도 해 주십시오.</value>
+  </data>
+  <data name="seleniumNotFound" xml:space="preserve">
+    <value>Pip 모듈 'selenium'을 찾을 수 없습니다. PATH에 등록된 python으로 다운로드를 시작 합니다.</value>
+  </data>
+  <data name="webOpen" xml:space="preserve">
+    <value>'예'를 클릭 하는 경우 기본 브라우저로 다운로드 페이지를 엽니다.</value>
+  </data>
+  <data name="currentVersion" xml:space="preserve">
+    <value>현재 버전: </value>
+  </data>
+  <data name="newVersion" xml:space="preserve">
+    <value>새 버전: </value>
+  </data>
+  <data name="itemVersionGUI" xml:space="preserve">
+    <value>앱 업데이트 확인</value>
   </data>
 </root>

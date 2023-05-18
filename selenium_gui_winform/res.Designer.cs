@@ -132,6 +132,15 @@ namespace selenium_gui_winform {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Current version: .
+        /// </summary>
+        public static string currentVersion {
+            get {
+                return ResourceManager.GetString("currentVersion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Successfully done! But, failed to open output directory. Because it located on access denied path with application&apos;s permission..
         /// </summary>
         public static string doneCrawl {
@@ -195,11 +204,20 @@ namespace selenium_gui_winform {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Check update.
+        ///   Looks up a localized string similar to Check update Script.
         /// </summary>
         public static string itemVersion {
             get {
                 return ResourceManager.GetString("itemVersion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Check update App.
+        /// </summary>
+        public static string itemVersionGUI {
+            get {
+                return ResourceManager.GetString("itemVersionGUI", resourceCulture);
             }
         }
         
@@ -213,11 +231,29 @@ namespace selenium_gui_winform {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to New version: .
+        /// </summary>
+        public static string newVersion {
+            get {
+                return ResourceManager.GetString("newVersion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Execute file not found. Start downloading.
         /// </summary>
         public static string notFoundExecute {
             get {
                 return ResourceManager.GetString("notFoundExecute", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pip module &apos;selenium&apos; was not found. Install pip module. Start downloading that module for PATH python..
+        /// </summary>
+        public static string seleniumNotFound {
+            get {
+                return ResourceManager.GetString("seleniumNotFound", resourceCulture);
             }
         }
         
@@ -290,6 +326,15 @@ namespace selenium_gui_winform {
         public static string webNo {
             get {
                 return ResourceManager.GetString("webNo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to If click &apos;OK&apos;, open download page with default browser..
+        /// </summary>
+        public static string webOpen {
+            get {
+                return ResourceManager.GetString("webOpen", resourceCulture);
             }
         }
         

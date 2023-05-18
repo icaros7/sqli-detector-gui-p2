@@ -1,559 +1,582 @@
 ﻿<root>
-  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
-    <xsd:element name="root" msdata:IsDataSet="true">
-      <xsd:complexType>
-        <xsd:choice maxOccurs="unbounded">
-          <xsd:element name="metadata">
+    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root"
+                xmlns="">
+        <xsd:import namespace="http://www.w3.org/XML/1998/namespace"/>
+        <xsd:element name="root" msdata:IsDataSet="true">
             <xsd:complexType>
-              <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" />
-              </xsd:sequence>
-              <xsd:attribute name="name" use="required" type="xsd:string" />
-              <xsd:attribute name="type" type="xsd:string" />
-              <xsd:attribute name="mimetype" type="xsd:string" />
-              <xsd:attribute ref="xml:space" />
+                <xsd:choice maxOccurs="unbounded">
+                    <xsd:element name="metadata">
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element name="value" type="xsd:string" minOccurs="0"/>
+                            </xsd:sequence>
+                            <xsd:attribute name="name" use="required" type="xsd:string"/>
+                            <xsd:attribute name="type" type="xsd:string"/>
+                            <xsd:attribute name="mimetype" type="xsd:string"/>
+                            <xsd:attribute ref="xml:space"/>
+                        </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="assembly">
+                        <xsd:complexType>
+                            <xsd:attribute name="alias" type="xsd:string"/>
+                            <xsd:attribute name="name" type="xsd:string"/>
+                        </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="data">
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+                                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2"/>
+                            </xsd:sequence>
+                            <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1"/>
+                            <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3"/>
+                            <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4"/>
+                            <xsd:attribute ref="xml:space"/>
+                        </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="resheader">
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+                            </xsd:sequence>
+                            <xsd:attribute name="name" type="xsd:string" use="required"/>
+                        </xsd:complexType>
+                    </xsd:element>
+                </xsd:choice>
             </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="assembly">
-            <xsd:complexType>
-              <xsd:attribute name="alias" type="xsd:string" />
-              <xsd:attribute name="name" type="xsd:string" />
-            </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="data">
-            <xsd:complexType>
-              <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
-              </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
-              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
-              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
-              <xsd:attribute ref="xml:space" />
-            </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="resheader">
-            <xsd:complexType>
-              <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-              </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" />
-            </xsd:complexType>
-          </xsd:element>
-        </xsd:choice>
-      </xsd:complexType>
-    </xsd:element>
-  </xsd:schema>
-  <resheader name="resmimetype">
-    <value>text/microsoft-resx</value>
-  </resheader>
-  <resheader name="version">
-    <value>2.0</value>
-  </resheader>
-  <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </resheader>
-  <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </resheader>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="labelTarget.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="labelTarget.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 27</value>
-  </data>
-  <data name="labelTarget.Size" type="System.Drawing.Size, System.Drawing">
-    <value>49, 12</value>
-  </data>
-  <data name="labelTarget.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="labelTarget.Text" xml:space="preserve">
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>2.0</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        </value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        </value>
+    </resheader>
+    <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
+    <data name="labelTarget.AutoSize" type="System.Boolean, mscorlib">
+        <value>True</value>
+    </data>
+    <assembly alias="System.Drawing"
+              name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"/>
+    <data name="labelTarget.Location" type="System.Drawing.Point, System.Drawing">
+        <value>10, 27</value>
+    </data>
+    <data name="labelTarget.Size" type="System.Drawing.Size, System.Drawing">
+        <value>49, 12</value>
+    </data>
+    <data name="labelTarget.TabIndex" type="System.Int32, mscorlib">
+        <value>0</value>
+    </data>
+    <data name="labelTarget.Text" xml:space="preserve">
     <value>Target: </value>
   </data>
-  <data name="&gt;&gt;labelTarget.Name" xml:space="preserve">
+    <data name="&gt;&gt;labelTarget.Name" xml:space="preserve">
     <value>labelTarget</value>
   </data>
-  <data name="&gt;&gt;labelTarget.Type" xml:space="preserve">
+    <data name="&gt;&gt;labelTarget.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;labelTarget.Parent" xml:space="preserve">
+    <data name="&gt;&gt;labelTarget.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;labelTarget.ZOrder" xml:space="preserve">
+    <data name="&gt;&gt;labelTarget.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <data name="tbURL.Location" type="System.Drawing.Point, System.Drawing">
-    <value>66, 25</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="tbURL.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="tbURL.Size" type="System.Drawing.Size, System.Drawing">
-    <value>260, 21</value>
-  </data>
-  <data name="tbURL.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="tbURL.Text" xml:space="preserve">
+    <data name="tbURL.Location" type="System.Drawing.Point, System.Drawing">
+        <value>66, 25</value>
+    </data>
+    <assembly alias="System.Windows.Forms"
+              name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
+    <data name="tbURL.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+        <value>3, 2, 3, 2</value>
+    </data>
+    <data name="tbURL.Size" type="System.Drawing.Size, System.Drawing">
+        <value>260, 21</value>
+    </data>
+    <data name="tbURL.TabIndex" type="System.Int32, mscorlib">
+        <value>1</value>
+    </data>
+    <data name="tbURL.Text" xml:space="preserve">
     <value>https://minnote.net</value>
   </data>
-  <data name="&gt;&gt;tbURL.Name" xml:space="preserve">
+    <data name="&gt;&gt;tbURL.Name" xml:space="preserve">
     <value>tbURL</value>
   </data>
-  <data name="&gt;&gt;tbURL.Type" xml:space="preserve">
+    <data name="&gt;&gt;tbURL.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;tbURL.Parent" xml:space="preserve">
+    <data name="&gt;&gt;tbURL.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;tbURL.ZOrder" xml:space="preserve">
+    <data name="&gt;&gt;tbURL.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="cbSave.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="cbSave.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 96</value>
-  </data>
-  <data name="cbSave.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="cbSave.Size" type="System.Drawing.Size, System.Drawing">
-    <value>101, 16</value>
-  </data>
-  <data name="cbSave.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="cbSave.Text" xml:space="preserve">
+    <data name="cbSave.AutoSize" type="System.Boolean, mscorlib">
+        <value>True</value>
+    </data>
+    <data name="cbSave.Location" type="System.Drawing.Point, System.Drawing">
+        <value>12, 96</value>
+    </data>
+    <data name="cbSave.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+        <value>3, 2, 3, 2</value>
+    </data>
+    <data name="cbSave.Size" type="System.Drawing.Size, System.Drawing">
+        <value>101, 16</value>
+    </data>
+    <data name="cbSave.TabIndex" type="System.Int32, mscorlib">
+        <value>2</value>
+    </data>
+    <data name="cbSave.Text" xml:space="preserve">
     <value>Save Settings</value>
   </data>
-  <data name="&gt;&gt;cbSave.Name" xml:space="preserve">
+    <data name="&gt;&gt;cbSave.Name" xml:space="preserve">
     <value>cbSave</value>
   </data>
-  <data name="&gt;&gt;cbSave.Type" xml:space="preserve">
+    <data name="&gt;&gt;cbSave.Type" xml:space="preserve">
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;cbSave.Parent" xml:space="preserve">
+    <data name="&gt;&gt;cbSave.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;cbSave.ZOrder" xml:space="preserve">
+    <data name="&gt;&gt;cbSave.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <metadata name="menuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <data name="itemExit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>93, 22</value>
-  </data>
-  <data name="itemExit.Text" xml:space="preserve">
+    <metadata name="menuStrip.TrayLocation"
+              type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+        <value>17, 17</value>
+    </metadata>
+    <data name="itemExit.Size" type="System.Drawing.Size, System.Drawing">
+        <value>93, 22</value>
+    </data>
+    <data name="itemExit.Text" xml:space="preserve">
     <value>&amp;Exit</value>
   </data>
-  <data name="stripFile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>37, 20</value>
-  </data>
-  <data name="stripFile.Text" xml:space="preserve">
+    <data name="stripFile.Size" type="System.Drawing.Size, System.Drawing">
+        <value>37, 20</value>
+    </data>
+    <data name="stripFile.Text" xml:space="preserve">
     <value>&amp;File</value>
   </data>
-  <data name="itemKor.Size" type="System.Drawing.Size, System.Drawing">
-    <value>112, 22</value>
-  </data>
-  <data name="itemKor.Text" xml:space="preserve">
+    <data name="itemKor.Size" type="System.Drawing.Size, System.Drawing">
+        <value>112, 22</value>
+    </data>
+    <data name="itemKor.Text" xml:space="preserve">
     <value>한국어</value>
   </data>
-  <data name="itemEng.Size" type="System.Drawing.Size, System.Drawing">
-    <value>112, 22</value>
-  </data>
-  <data name="itemEng.Text" xml:space="preserve">
+    <data name="itemEng.Size" type="System.Drawing.Size, System.Drawing">
+        <value>112, 22</value>
+    </data>
+    <data name="itemEng.Text" xml:space="preserve">
     <value>English</value>
   </data>
-  <data name="stripLang.Size" type="System.Drawing.Size, System.Drawing">
-    <value>71, 20</value>
-  </data>
-  <data name="stripLang.Text" xml:space="preserve">
+    <data name="stripLang.Size" type="System.Drawing.Size, System.Drawing">
+        <value>71, 20</value>
+    </data>
+    <data name="stripLang.Text" xml:space="preserve">
     <value>&amp;Language</value>
   </data>
-  <data name="itemVersion.Size" type="System.Drawing.Size, System.Drawing">
-    <value>148, 22</value>
-  </data>
-  <data name="itemVersion.Text" xml:space="preserve">
+    <data name="itemVersion.Size" type="System.Drawing.Size, System.Drawing">
+        <value>180, 22</value>
+    </data>
+    <data name="itemVersion.Text" xml:space="preserve">
     <value>Check Update</value>
   </data>
-  <data name="itemBar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>145, 6</value>
+    <data name="itemVersionGUI.Size" type="System.Drawing.Size, System.Drawing">
+        <value>180, 22</value>
+    </data>
+    <data name="itemVersionGUI.Text" xml:space="preserve">
+    <value>itemVersionGUI</value>
   </data>
-  <data name="itemAbout.Size" type="System.Drawing.Size, System.Drawing">
-    <value>148, 22</value>
-  </data>
-  <data name="itemAbout.Text" xml:space="preserve">
+    <data name="itemBar.Size" type="System.Drawing.Size, System.Drawing">
+        <value>177, 6</value>
+    </data>
+    <data name="itemAbout.Size" type="System.Drawing.Size, System.Drawing">
+        <value>180, 22</value>
+    </data>
+    <data name="itemAbout.Text" xml:space="preserve">
     <value>About</value>
   </data>
-  <data name="stripHelp.Size" type="System.Drawing.Size, System.Drawing">
-    <value>44, 20</value>
-  </data>
-  <data name="stripHelp.Text" xml:space="preserve">
+    <data name="stripHelp.Size" type="System.Drawing.Size, System.Drawing">
+        <value>44, 20</value>
+    </data>
+    <data name="stripHelp.Text" xml:space="preserve">
     <value>&amp;Help</value>
   </data>
-  <data name="menuStrip.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="menuStrip.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 2, 0, 2</value>
-  </data>
-  <data name="menuStrip.Size" type="System.Drawing.Size, System.Drawing">
-    <value>335, 24</value>
-  </data>
-  <data name="menuStrip.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="menuStrip.Text" xml:space="preserve">
+    <data name="menuStrip.Location" type="System.Drawing.Point, System.Drawing">
+        <value>0, 0</value>
+    </data>
+    <data name="menuStrip.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+        <value>5, 2, 0, 2</value>
+    </data>
+    <data name="menuStrip.Size" type="System.Drawing.Size, System.Drawing">
+        <value>335, 24</value>
+    </data>
+    <data name="menuStrip.TabIndex" type="System.Int32, mscorlib">
+        <value>3</value>
+    </data>
+    <data name="menuStrip.Text" xml:space="preserve">
     <value>menuStrip1</value>
   </data>
-  <data name="&gt;&gt;menuStrip.Name" xml:space="preserve">
+    <data name="&gt;&gt;menuStrip.Name" xml:space="preserve">
     <value>menuStrip</value>
   </data>
-  <data name="&gt;&gt;menuStrip.Type" xml:space="preserve">
+    <data name="&gt;&gt;menuStrip.Type" xml:space="preserve">
     <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;menuStrip.Parent" xml:space="preserve">
+    <data name="&gt;&gt;menuStrip.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;menuStrip.ZOrder" xml:space="preserve">
+    <data name="&gt;&gt;menuStrip.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
-  <data name="radioOpera.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="radioOpera.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="radioOpera.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="radioOpera.Location" type="System.Drawing.Point, System.Drawing">
-    <value>243, 19</value>
-  </data>
-  <data name="radioOpera.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="radioOpera.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 16</value>
-  </data>
-  <data name="radioOpera.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="radioOpera.Text" xml:space="preserve">
+    <data name="radioOpera.AutoSize" type="System.Boolean, mscorlib">
+        <value>True</value>
+    </data>
+    <data name="radioOpera.Enabled" type="System.Boolean, mscorlib">
+        <value>False</value>
+    </data>
+    <assembly alias="System.Windows.Forms"
+              name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
+    <data name="radioOpera.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+        <value>NoControl</value>
+    </data>
+    <data name="radioOpera.Location" type="System.Drawing.Point, System.Drawing">
+        <value>243, 19</value>
+    </data>
+    <data name="radioOpera.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+        <value>3, 2, 3, 2</value>
+    </data>
+    <data name="radioOpera.Size" type="System.Drawing.Size, System.Drawing">
+        <value>57, 16</value>
+    </data>
+    <data name="radioOpera.TabIndex" type="System.Int32, mscorlib">
+        <value>3</value>
+    </data>
+    <data name="radioOpera.Text" xml:space="preserve">
     <value>Opera</value>
   </data>
-  <data name="&gt;&gt;radioOpera.Name" xml:space="preserve">
+    <data name="&gt;&gt;radioOpera.Name" xml:space="preserve">
     <value>radioOpera</value>
   </data>
-  <data name="&gt;&gt;radioOpera.Type" xml:space="preserve">
+    <data name="&gt;&gt;radioOpera.Type" xml:space="preserve">
     <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;radioOpera.Parent" xml:space="preserve">
+    <data name="&gt;&gt;radioOpera.Parent" xml:space="preserve">
     <value>groupBrowser</value>
   </data>
-  <data name="&gt;&gt;radioOpera.ZOrder" xml:space="preserve">
+    <data name="&gt;&gt;radioOpera.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="radioFirefox.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="radioFirefox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="radioFirefox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>162, 19</value>
-  </data>
-  <data name="radioFirefox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="radioFirefox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>61, 16</value>
-  </data>
-  <data name="radioFirefox.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="radioFirefox.Text" xml:space="preserve">
+    <data name="radioFirefox.AutoSize" type="System.Boolean, mscorlib">
+        <value>True</value>
+    </data>
+    <data name="radioFirefox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+        <value>NoControl</value>
+    </data>
+    <data name="radioFirefox.Location" type="System.Drawing.Point, System.Drawing">
+        <value>162, 19</value>
+    </data>
+    <data name="radioFirefox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+        <value>3, 2, 3, 2</value>
+    </data>
+    <data name="radioFirefox.Size" type="System.Drawing.Size, System.Drawing">
+        <value>61, 16</value>
+    </data>
+    <data name="radioFirefox.TabIndex" type="System.Int32, mscorlib">
+        <value>2</value>
+    </data>
+    <data name="radioFirefox.Text" xml:space="preserve">
     <value>Firefox</value>
   </data>
-  <data name="&gt;&gt;radioFirefox.Name" xml:space="preserve">
+    <data name="&gt;&gt;radioFirefox.Name" xml:space="preserve">
     <value>radioFirefox</value>
   </data>
-  <data name="&gt;&gt;radioFirefox.Type" xml:space="preserve">
+    <data name="&gt;&gt;radioFirefox.Type" xml:space="preserve">
     <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;radioFirefox.Parent" xml:space="preserve">
+    <data name="&gt;&gt;radioFirefox.Parent" xml:space="preserve">
     <value>groupBrowser</value>
   </data>
-  <data name="&gt;&gt;radioFirefox.ZOrder" xml:space="preserve">
+    <data name="&gt;&gt;radioFirefox.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="radioChrome.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="radioChrome.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="radioChrome.Location" type="System.Drawing.Point, System.Drawing">
-    <value>74, 19</value>
-  </data>
-  <data name="radioChrome.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="radioChrome.Size" type="System.Drawing.Size, System.Drawing">
-    <value>68, 16</value>
-  </data>
-  <data name="radioChrome.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="radioChrome.Text" xml:space="preserve">
+    <data name="radioChrome.AutoSize" type="System.Boolean, mscorlib">
+        <value>True</value>
+    </data>
+    <data name="radioChrome.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+        <value>NoControl</value>
+    </data>
+    <data name="radioChrome.Location" type="System.Drawing.Point, System.Drawing">
+        <value>74, 19</value>
+    </data>
+    <data name="radioChrome.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+        <value>3, 2, 3, 2</value>
+    </data>
+    <data name="radioChrome.Size" type="System.Drawing.Size, System.Drawing">
+        <value>68, 16</value>
+    </data>
+    <data name="radioChrome.TabIndex" type="System.Int32, mscorlib">
+        <value>1</value>
+    </data>
+    <data name="radioChrome.Text" xml:space="preserve">
     <value>Chrome</value>
   </data>
-  <data name="&gt;&gt;radioChrome.Name" xml:space="preserve">
+    <data name="&gt;&gt;radioChrome.Name" xml:space="preserve">
     <value>radioChrome</value>
   </data>
-  <data name="&gt;&gt;radioChrome.Type" xml:space="preserve">
+    <data name="&gt;&gt;radioChrome.Type" xml:space="preserve">
     <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;radioChrome.Parent" xml:space="preserve">
+    <data name="&gt;&gt;radioChrome.Parent" xml:space="preserve">
     <value>groupBrowser</value>
   </data>
-  <data name="&gt;&gt;radioChrome.ZOrder" xml:space="preserve">
+    <data name="&gt;&gt;radioChrome.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="radioEdge.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="radioEdge.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 19</value>
-  </data>
-  <data name="radioEdge.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="radioEdge.Size" type="System.Drawing.Size, System.Drawing">
-    <value>52, 16</value>
-  </data>
-  <data name="radioEdge.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="radioEdge.Text" xml:space="preserve">
+    <data name="radioEdge.AutoSize" type="System.Boolean, mscorlib">
+        <value>True</value>
+    </data>
+    <data name="radioEdge.Location" type="System.Drawing.Point, System.Drawing">
+        <value>5, 19</value>
+    </data>
+    <data name="radioEdge.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+        <value>3, 2, 3, 2</value>
+    </data>
+    <data name="radioEdge.Size" type="System.Drawing.Size, System.Drawing">
+        <value>52, 16</value>
+    </data>
+    <data name="radioEdge.TabIndex" type="System.Int32, mscorlib">
+        <value>0</value>
+    </data>
+    <data name="radioEdge.Text" xml:space="preserve">
     <value>Edge</value>
   </data>
-  <data name="&gt;&gt;radioEdge.Name" xml:space="preserve">
+    <data name="&gt;&gt;radioEdge.Name" xml:space="preserve">
     <value>radioEdge</value>
   </data>
-  <data name="&gt;&gt;radioEdge.Type" xml:space="preserve">
+    <data name="&gt;&gt;radioEdge.Type" xml:space="preserve">
     <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;radioEdge.Parent" xml:space="preserve">
+    <data name="&gt;&gt;radioEdge.Parent" xml:space="preserve">
     <value>groupBrowser</value>
   </data>
-  <data name="&gt;&gt;radioEdge.ZOrder" xml:space="preserve">
+    <data name="&gt;&gt;radioEdge.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="groupBrowser.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 47</value>
-  </data>
-  <data name="groupBrowser.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="groupBrowser.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="groupBrowser.Size" type="System.Drawing.Size, System.Drawing">
-    <value>314, 40</value>
-  </data>
-  <data name="groupBrowser.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="groupBrowser.Text" xml:space="preserve">
+    <data name="groupBrowser.Location" type="System.Drawing.Point, System.Drawing">
+        <value>10, 47</value>
+    </data>
+    <data name="groupBrowser.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+        <value>3, 2, 3, 2</value>
+    </data>
+    <data name="groupBrowser.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+        <value>3, 2, 3, 2</value>
+    </data>
+    <data name="groupBrowser.Size" type="System.Drawing.Size, System.Drawing">
+        <value>314, 40</value>
+    </data>
+    <data name="groupBrowser.TabIndex" type="System.Int32, mscorlib">
+        <value>4</value>
+    </data>
+    <data name="groupBrowser.Text" xml:space="preserve">
     <value>Select Brower</value>
   </data>
-  <data name="&gt;&gt;groupBrowser.Name" xml:space="preserve">
+    <data name="&gt;&gt;groupBrowser.Name" xml:space="preserve">
     <value>groupBrowser</value>
   </data>
-  <data name="&gt;&gt;groupBrowser.Type" xml:space="preserve">
+    <data name="&gt;&gt;groupBrowser.Type" xml:space="preserve">
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;groupBrowser.Parent" xml:space="preserve">
+    <data name="&gt;&gt;groupBrowser.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;groupBrowser.ZOrder" xml:space="preserve">
+    <data name="&gt;&gt;groupBrowser.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="btnStart.Location" type="System.Drawing.Point, System.Drawing">
-    <value>242, 92</value>
-  </data>
-  <data name="btnStart.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="btnStart.Size" type="System.Drawing.Size, System.Drawing">
-    <value>82, 23</value>
-  </data>
-  <data name="btnStart.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="btnStart.Text" xml:space="preserve">
+    <data name="btnStart.Location" type="System.Drawing.Point, System.Drawing">
+        <value>242, 92</value>
+    </data>
+    <data name="btnStart.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+        <value>3, 2, 3, 2</value>
+    </data>
+    <data name="btnStart.Size" type="System.Drawing.Size, System.Drawing">
+        <value>82, 23</value>
+    </data>
+    <data name="btnStart.TabIndex" type="System.Int32, mscorlib">
+        <value>5</value>
+    </data>
+    <data name="btnStart.Text" xml:space="preserve">
     <value>Start</value>
   </data>
-  <data name="&gt;&gt;btnStart.Name" xml:space="preserve">
+    <data name="&gt;&gt;btnStart.Name" xml:space="preserve">
     <value>btnStart</value>
   </data>
-  <data name="&gt;&gt;btnStart.Type" xml:space="preserve">
+    <data name="&gt;&gt;btnStart.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;btnStart.Parent" xml:space="preserve">
+    <data name="&gt;&gt;btnStart.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;btnStart.ZOrder" xml:space="preserve">
+    <data name="&gt;&gt;btnStart.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="textBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 120</value>
-  </data>
-  <data name="textBox1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="textBox1.Multiline" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="textBox1.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
-    <value>Vertical</value>
-  </data>
-  <data name="textBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>315, 170</value>
-  </data>
-  <data name="textBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;textBox1.Name" xml:space="preserve">
+    <data name="textBox1.Location" type="System.Drawing.Point, System.Drawing">
+        <value>10, 120</value>
+    </data>
+    <data name="textBox1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+        <value>3, 2, 3, 2</value>
+    </data>
+    <data name="textBox1.Multiline" type="System.Boolean, mscorlib">
+        <value>True</value>
+    </data>
+    <data name="textBox1.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
+        <value>Vertical</value>
+    </data>
+    <data name="textBox1.Size" type="System.Drawing.Size, System.Drawing">
+        <value>315, 170</value>
+    </data>
+    <data name="textBox1.TabIndex" type="System.Int32, mscorlib">
+        <value>6</value>
+    </data>
+    <data name="&gt;&gt;textBox1.Name" xml:space="preserve">
     <value>textBox1</value>
   </data>
-  <data name="&gt;&gt;textBox1.Type" xml:space="preserve">
+    <data name="&gt;&gt;textBox1.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;textBox1.Parent" xml:space="preserve">
+    <data name="&gt;&gt;textBox1.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;textBox1.ZOrder" xml:space="preserve">
+    <data name="&gt;&gt;textBox1.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="cbTag.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="cbTag.Location" type="System.Drawing.Point, System.Drawing">
-    <value>133, 96</value>
-  </data>
-  <data name="cbTag.Size" type="System.Drawing.Size, System.Drawing">
-    <value>106, 16</value>
-  </data>
-  <data name="cbTag.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="cbTag.Text" xml:space="preserve">
+    <data name="cbTag.AutoSize" type="System.Boolean, mscorlib">
+        <value>True</value>
+    </data>
+    <data name="cbTag.Location" type="System.Drawing.Point, System.Drawing">
+        <value>133, 96</value>
+    </data>
+    <data name="cbTag.Size" type="System.Drawing.Size, System.Drawing">
+        <value>106, 16</value>
+    </data>
+    <data name="cbTag.TabIndex" type="System.Int32, mscorlib">
+        <value>7</value>
+    </data>
+    <data name="cbTag.Text" xml:space="preserve">
     <value>Search Tag(#)</value>
   </data>
-  <data name="&gt;&gt;cbTag.Name" xml:space="preserve">
+    <data name="&gt;&gt;cbTag.Name" xml:space="preserve">
     <value>cbTag</value>
   </data>
-  <data name="&gt;&gt;cbTag.Type" xml:space="preserve">
+    <data name="&gt;&gt;cbTag.Type" xml:space="preserve">
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;cbTag.Parent" xml:space="preserve">
+    <data name="&gt;&gt;cbTag.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;cbTag.ZOrder" xml:space="preserve">
+    <data name="&gt;&gt;cbTag.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>81</value>
-  </metadata>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>7, 12</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>335, 299</value>
-  </data>
-  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Gulim, 9pt</value>
-  </data>
-  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
-    <value>CenterScreen</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
+    <metadata name="$this.Localizable"
+              type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+        <value>True</value>
+    </metadata>
+    <metadata name="$this.TrayHeight"
+              type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+        <value>81</value>
+    </metadata>
+    <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+        <value>7, 12</value>
+    </data>
+    <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+        <value>335, 299</value>
+    </data>
+    <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
+        <value>Gulim, 9pt</value>
+    </data>
+    <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+        <value>3, 2, 3, 2</value>
+    </data>
+    <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+        <value>CenterScreen</value>
+    </data>
+    <data name="$this.Text" xml:space="preserve">
     <value>Selenium SQLi Dector</value>
   </data>
-  <data name="&gt;&gt;stripFile.Name" xml:space="preserve">
+    <data name="&gt;&gt;stripFile.Name" xml:space="preserve">
     <value>stripFile</value>
   </data>
-  <data name="&gt;&gt;stripFile.Type" xml:space="preserve">
+    <data name="&gt;&gt;stripFile.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;itemExit.Name" xml:space="preserve">
+    <data name="&gt;&gt;itemExit.Name" xml:space="preserve">
     <value>itemExit</value>
   </data>
-  <data name="&gt;&gt;itemExit.Type" xml:space="preserve">
+    <data name="&gt;&gt;itemExit.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;stripLang.Name" xml:space="preserve">
+    <data name="&gt;&gt;stripLang.Name" xml:space="preserve">
     <value>stripLang</value>
   </data>
-  <data name="&gt;&gt;stripLang.Type" xml:space="preserve">
+    <data name="&gt;&gt;stripLang.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;itemKor.Name" xml:space="preserve">
+    <data name="&gt;&gt;itemKor.Name" xml:space="preserve">
     <value>itemKor</value>
   </data>
-  <data name="&gt;&gt;itemKor.Type" xml:space="preserve">
+    <data name="&gt;&gt;itemKor.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;itemEng.Name" xml:space="preserve">
+    <data name="&gt;&gt;itemEng.Name" xml:space="preserve">
     <value>itemEng</value>
   </data>
-  <data name="&gt;&gt;itemEng.Type" xml:space="preserve">
+    <data name="&gt;&gt;itemEng.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;stripHelp.Name" xml:space="preserve">
+    <data name="&gt;&gt;stripHelp.Name" xml:space="preserve">
     <value>stripHelp</value>
   </data>
-  <data name="&gt;&gt;stripHelp.Type" xml:space="preserve">
+    <data name="&gt;&gt;stripHelp.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;itemVersion.Name" xml:space="preserve">
+    <data name="&gt;&gt;itemVersion.Name" xml:space="preserve">
     <value>itemVersion</value>
   </data>
-  <data name="&gt;&gt;itemVersion.Type" xml:space="preserve">
+    <data name="&gt;&gt;itemVersion.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;itemBar.Name" xml:space="preserve">
+    <data name="&gt;&gt;itemBar.Name" xml:space="preserve">
     <value>itemBar</value>
   </data>
-  <data name="&gt;&gt;itemBar.Type" xml:space="preserve">
+    <data name="&gt;&gt;itemBar.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;itemAbout.Name" xml:space="preserve">
+    <data name="&gt;&gt;itemAbout.Name" xml:space="preserve">
     <value>itemAbout</value>
   </data>
-  <data name="&gt;&gt;itemAbout.Type" xml:space="preserve">
+    <data name="&gt;&gt;itemAbout.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <data name="&gt;&gt;itemVersionGUI.Name" xml:space="preserve">
+    <value>itemVersionGUI</value>
+  </data>
+    <data name="&gt;&gt;itemVersionGUI.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+    <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>Form1</value>
   </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>
