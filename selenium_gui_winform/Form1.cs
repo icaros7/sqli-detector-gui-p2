@@ -152,7 +152,16 @@ namespace selenium_gui_winform {
             Proc.BeginErrorReadLine();
 
             Proc.OutputDataReceived += (sender, e) => textBox1.AppendText(e.Data + "\r");
-            Proc.ErrorDataReceived += (sender, e) => textBox1.AppendText(e.Data + "\r");
+            Proc.ErrorDataReceived += (sender, e) => {
+                if (e.Data == @"ModuleNotFoundError: No module named 'selenium'") {
+                    if (MessageBox.Show(res.seleniumNotFound, res.information, MessageBoxButtons.OKCancel,
+                            MessageBoxIcon.Question) == DialogResult.OK) {
+                        Process.Start(@"python -m pip install selenium");
+                    }
+                    else { return; }
+                }
+                textBox1.AppendText(e.Data + "\r");
+            };
 
             await Proc.WaitForExitAsync();
 
