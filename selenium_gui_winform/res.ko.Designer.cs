@@ -78,6 +78,24 @@ namespace selenium_gui_winform {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 추가.
+        /// </summary>
+        public static string btnCookAdd {
+            get {
+                return ResourceManager.GetString("btnCookAdd", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 쿠기 전체 삭제.
+        /// </summary>
+        public static string btnCookDel {
+            get {
+                return ResourceManager.GetString("btnCookDel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 시작.
         /// </summary>
         public static string btnStart {
@@ -231,11 +249,47 @@ namespace selenium_gui_winform {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 쿠키 이름:.
+        /// </summary>
+        public static string lblCookName {
+            get {
+                return ResourceManager.GetString("lblCookName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 쿠키 값:.
+        /// </summary>
+        public static string lblCookValue {
+            get {
+                return ResourceManager.GetString("lblCookValue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 새 버전: .
         /// </summary>
         public static string newVersion {
             get {
                 return ResourceManager.GetString("newVersion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 쿠키 리스트가 비어있습니다.
+        /// </summary>
+        public static string noCookieList {
+            get {
+                return ResourceManager.GetString("noCookieList", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 쿠키의 이름 또는 값을 설정 해야 합니다..
+        /// </summary>
+        public static string noCookieName {
+            get {
+                return ResourceManager.GetString("noCookieName", resourceCulture);
             }
         }
         

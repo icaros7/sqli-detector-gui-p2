@@ -78,6 +78,24 @@ namespace selenium_gui_winform {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Add.
+        /// </summary>
+        public static string btnCookAdd {
+            get {
+                return ResourceManager.GetString("btnCookAdd", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Delete All Cookie.
+        /// </summary>
+        public static string btnCookDel {
+            get {
+                return ResourceManager.GetString("btnCookDel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Start.
         /// </summary>
         public static string btnStart {
@@ -231,11 +249,47 @@ namespace selenium_gui_winform {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Cookie Name:.
+        /// </summary>
+        public static string lblCookName {
+            get {
+                return ResourceManager.GetString("lblCookName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cookie Value:.
+        /// </summary>
+        public static string lblCookValue {
+            get {
+                return ResourceManager.GetString("lblCookValue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to New version: .
         /// </summary>
         public static string newVersion {
             get {
                 return ResourceManager.GetString("newVersion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The cookie list is empty.
+        /// </summary>
+        public static string noCookieList {
+            get {
+                return ResourceManager.GetString("noCookieList", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You must be set cookie&apos;s name or value..
+        /// </summary>
+        public static string noCookieName {
+            get {
+                return ResourceManager.GetString("noCookieName", resourceCulture);
             }
         }
         
