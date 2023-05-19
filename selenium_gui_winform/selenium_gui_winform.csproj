@@ -9,7 +9,7 @@
         <RepositoryUrl>https://github.com/icaros7/sqli-detection-gui</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
         <PublishSingleFile>true</PublishSingleFile>
-        <Version>1.0.0</Version>
+        <Version>1.0.1</Version>
         <Title>Selenium SQLi Detector</Title>
         <Authors>K-Shield Jr. 10th A-09</Authors>
         <Company>K-Shield Jr. 10th A-09</Company>
