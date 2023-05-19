@@ -1,55 +1,55 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <OutputType>WinExe</OutputType>
-    <TargetFramework>net7.0-windows</TargetFramework>
-    <Nullable>enable</Nullable>
-    <UseWindowsForms>true</UseWindowsForms>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <RepositoryUrl>https://github.com/icaros7/sqli-detection-gui</RepositoryUrl>
-    <RepositoryType>git</RepositoryType>
-    <PublishSingleFile>true</PublishSingleFile>
-    <Version>1.0.0</Version>
-    <Title>Selenium SQLi Detector</Title>
-    <Authors>K-Shield Jr. 10th A-09</Authors>
-    <Company>K-Shield Jr. 10th A-09</Company>
-    <Description>SQLi Detector</Description>
-  </PropertyGroup>
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net7.0-windows</TargetFramework>
+        <Nullable>enable</Nullable>
+        <UseWindowsForms>true</UseWindowsForms>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <RepositoryUrl>https://github.com/icaros7/sqli-detection-gui</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <PublishSingleFile>true</PublishSingleFile>
+        <Version>1.0.0</Version>
+        <Title>Selenium SQLi Detector</Title>
+        <Authors>K-Shield Jr. 10th A-09</Authors>
+        <Company>K-Shield Jr. 10th A-09</Company>
+        <Description>SQLi Detector</Description>
+    </PropertyGroup>
 
-  <ItemGroup>
-    <EmbeddedResource Update="res.ko.resx">
-      <LastGenOutput>res.ko.Designer.cs</LastGenOutput>
-      <Generator>PublicResXFileCodeGenerator</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="res.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>res.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-  </ItemGroup>
+    <ItemGroup>
+        <EmbeddedResource Update="res.ko.resx">
+            <LastGenOutput>res.ko.Designer.cs</LastGenOutput>
+            <Generator>PublicResXFileCodeGenerator</Generator>
+        </EmbeddedResource>
+        <EmbeddedResource Update="res.resx">
+            <Generator>PublicResXFileCodeGenerator</Generator>
+            <LastGenOutput>res.Designer.cs</LastGenOutput>
+        </EmbeddedResource>
+    </ItemGroup>
 
-  <ItemGroup>
-    <Compile Update="Properties\Settings.Designer.cs">
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Settings.settings</DependentUpon>
-    </Compile>
-    <Compile Update="res.ko.Designer.cs">
-      <DependentUpon>res.ko.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-    </Compile>
-    <Compile Update="res.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>res.resx</DependentUpon>
-    </Compile>
-  </ItemGroup>
+    <ItemGroup>
+        <Compile Update="Properties\Settings.Designer.cs">
+            <DesignTimeSharedInput>True</DesignTimeSharedInput>
+            <AutoGen>True</AutoGen>
+            <DependentUpon>Settings.settings</DependentUpon>
+        </Compile>
+        <Compile Update="res.ko.Designer.cs">
+            <DependentUpon>res.ko.resx</DependentUpon>
+            <DesignTime>True</DesignTime>
+            <AutoGen>True</AutoGen>
+        </Compile>
+        <Compile Update="res.Designer.cs">
+            <DesignTime>True</DesignTime>
+            <AutoGen>True</AutoGen>
+            <DependentUpon>res.resx</DependentUpon>
+        </Compile>
+    </ItemGroup>
 
-  <ItemGroup>
-    <None Update="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
-  </ItemGroup>
+    <ItemGroup>
+        <None Update="Properties\Settings.settings">
+            <Generator>SettingsSingleFileGenerator</Generator>
+            <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+        </None>
+    </ItemGroup>
 
 </Project>
