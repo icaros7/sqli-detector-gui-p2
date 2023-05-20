@@ -45,18 +45,10 @@
             radioEdge = new RadioButton();
             btnStart = new Button();
             textBox1 = new TextBox();
-            cbTag = new CheckBox();
-            gbCookie = new GroupBox();
-            listCookie = new ListBox();
-            btnCookAdd = new Button();
-            btnCookDel = new Button();
-            lbel_cookieValue = new Label();
-            lbl_cookieName = new Label();
-            tb_cookieValue = new TextBox();
-            tb_cookieName = new TextBox();
+            comboBox1 = new ComboBox();
+            lbl_Threads = new Label();
             menuStrip.SuspendLayout();
             groupBrowser.SuspendLayout();
-            gbCookie.SuspendLayout();
             SuspendLayout();
             // 
             // labelTarget
@@ -198,71 +190,24 @@
             textBox1.Name = "textBox1";
             textBox1.ReadOnly = true;
             // 
-            // cbTag
+            // comboBox1
             // 
-            resources.ApplyResources(cbTag, "cbTag");
-            cbTag.Name = "cbTag";
-            cbTag.UseVisualStyleBackColor = true;
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { resources.GetString("comboBox1.Items"), resources.GetString("comboBox1.Items1"), resources.GetString("comboBox1.Items2"), resources.GetString("comboBox1.Items3"), resources.GetString("comboBox1.Items4"), resources.GetString("comboBox1.Items5"), resources.GetString("comboBox1.Items6"), resources.GetString("comboBox1.Items7") });
+            resources.ApplyResources(comboBox1, "comboBox1");
+            comboBox1.Name = "comboBox1";
             // 
-            // gbCookie
+            // lbl_Threads
             // 
-            gbCookie.Controls.Add(listCookie);
-            gbCookie.Controls.Add(btnCookAdd);
-            gbCookie.Controls.Add(btnCookDel);
-            gbCookie.Controls.Add(lbel_cookieValue);
-            gbCookie.Controls.Add(lbl_cookieName);
-            gbCookie.Controls.Add(tb_cookieValue);
-            gbCookie.Controls.Add(tb_cookieName);
-            resources.ApplyResources(gbCookie, "gbCookie");
-            gbCookie.Name = "gbCookie";
-            gbCookie.TabStop = false;
-            // 
-            // listCookie
-            // 
-            listCookie.FormattingEnabled = true;
-            resources.ApplyResources(listCookie, "listCookie");
-            listCookie.Name = "listCookie";
-            // 
-            // btnCookAdd
-            // 
-            resources.ApplyResources(btnCookAdd, "btnCookAdd");
-            btnCookAdd.Name = "btnCookAdd";
-            btnCookAdd.UseVisualStyleBackColor = true;
-            btnCookAdd.Click += btnCookAdd_Click;
-            // 
-            // btnCookDel
-            // 
-            resources.ApplyResources(btnCookDel, "btnCookDel");
-            btnCookDel.Name = "btnCookDel";
-            btnCookDel.UseVisualStyleBackColor = true;
-            btnCookDel.Click += btnCookDel_Click;
-            // 
-            // lbel_cookieValue
-            // 
-            resources.ApplyResources(lbel_cookieValue, "lbel_cookieValue");
-            lbel_cookieValue.Name = "lbel_cookieValue";
-            // 
-            // lbl_cookieName
-            // 
-            resources.ApplyResources(lbl_cookieName, "lbl_cookieName");
-            lbl_cookieName.Name = "lbl_cookieName";
-            // 
-            // tb_cookieValue
-            // 
-            resources.ApplyResources(tb_cookieValue, "tb_cookieValue");
-            tb_cookieValue.Name = "tb_cookieValue";
-            // 
-            // tb_cookieName
-            // 
-            resources.ApplyResources(tb_cookieName, "tb_cookieName");
-            tb_cookieName.Name = "tb_cookieName";
+            resources.ApplyResources(lbl_Threads, "lbl_Threads");
+            lbl_Threads.Name = "lbl_Threads";
             // 
             // Form1
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(gbCookie);
-            Controls.Add(cbTag);
+            Controls.Add(lbl_Threads);
+            Controls.Add(comboBox1);
             Controls.Add(textBox1);
             Controls.Add(btnStart);
             Controls.Add(groupBrowser);
@@ -279,8 +224,6 @@
             menuStrip.PerformLayout();
             groupBrowser.ResumeLayout(false);
             groupBrowser.PerformLayout();
-            gbCookie.ResumeLayout(false);
-            gbCookie.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -307,15 +250,8 @@
         private RadioButton radioEdge;
         private Button btnStart;
         private TextBox textBox1;
-        private CheckBox cbTag;
         private ToolStripMenuItem itemVersionGUI;
-        private GroupBox gbCookie;
-        private Button btnCookAdd;
-        private Button btnCookDel;
-        private Label lbel_cookieValue;
-        private Label lbl_cookieName;
-        private TextBox tb_cookieValue;
-        private TextBox tb_cookieName;
-        private ListBox listCookie;
+        private ComboBox comboBox1;
+        private Label lbl_Threads;
     }
 }

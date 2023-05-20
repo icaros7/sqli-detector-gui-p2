@@ -15,8 +15,6 @@
         <Setting Name="saveSettings" Type="System.Boolean" Scope="User">
             <Value Profile="(Default)">False</Value>
         </Setting>
-        <Setting Name="searchTag" Type="System.Boolean" Scope="User">
-            <Value Profile="(Default)">False</Value>
-        </Setting>
     </Settings>
 </SettingsFile>
+

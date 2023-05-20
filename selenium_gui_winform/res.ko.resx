@@ -197,9 +197,6 @@
     <data name="downPath" xml:space="preserve">
     <value>저장 경로:</value>
   </data>
-    <data name="cbTag" xml:space="preserve">
-    <value>태그(#) 검색</value>
-  </data>
     <data name="chgLangWhile" xml:space="preserve">
     <value>작업 중에는 언어를 바꿀 수 없습니다! 잠시 후 다시 시도 해 주십시오.</value>
   </data>

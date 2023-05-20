@@ -123,15 +123,6 @@ namespace selenium_gui_winform {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Search Tag(#).
-        /// </summary>
-        public static string cbTag {
-            get {
-                return ResourceManager.GetString("cbTag", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Successfully change language to English.
         /// </summary>
         public static string changeLang {

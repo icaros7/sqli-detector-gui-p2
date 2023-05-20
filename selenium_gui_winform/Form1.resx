@@ -69,10 +69,10 @@
     <assembly alias="System.Drawing"
               name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"/>
     <data name="labelTarget.Location" type="System.Drawing.Point, System.Drawing">
-        <value>10, 27</value>
+        <value>11, 34</value>
     </data>
     <data name="labelTarget.Size" type="System.Drawing.Size, System.Drawing">
-        <value>49, 12</value>
+        <value>57, 15</value>
     </data>
     <data name="labelTarget.TabIndex" type="System.Int32, mscorlib">
         <value>0</value>
@@ -93,7 +93,7 @@
     <value>7</value>
   </data>
     <data name="tbURL.Location" type="System.Drawing.Point, System.Drawing">
-        <value>66, 25</value>
+        <value>75, 31</value>
     </data>
     <assembly alias="System.Windows.Forms"
               name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
@@ -101,7 +101,7 @@
         <value>3, 2, 3, 2</value>
     </data>
     <data name="tbURL.Size" type="System.Drawing.Size, System.Drawing">
-        <value>260, 21</value>
+        <value>297, 25</value>
     </data>
     <data name="tbURL.TabIndex" type="System.Int32, mscorlib">
         <value>1</value>
@@ -125,13 +125,13 @@
         <value>True</value>
     </data>
     <data name="cbSave.Location" type="System.Drawing.Point, System.Drawing">
-        <value>11, 100</value>
+        <value>148, 125</value>
     </data>
     <data name="cbSave.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
         <value>3, 2, 3, 2</value>
     </data>
     <data name="cbSave.Size" type="System.Drawing.Size, System.Drawing">
-        <value>101, 16</value>
+        <value>121, 19</value>
     </data>
     <data name="cbSave.TabIndex" type="System.Int32, mscorlib">
         <value>2</value>
@@ -156,58 +156,58 @@
         <value>17, 17</value>
     </metadata>
     <data name="itemExit.Size" type="System.Drawing.Size, System.Drawing">
-        <value>93, 22</value>
+        <value>116, 26</value>
     </data>
     <data name="itemExit.Text" xml:space="preserve">
     <value>&amp;Exit</value>
   </data>
     <data name="stripFile.Size" type="System.Drawing.Size, System.Drawing">
-        <value>37, 20</value>
+        <value>46, 24</value>
     </data>
     <data name="stripFile.Text" xml:space="preserve">
     <value>&amp;File</value>
   </data>
     <data name="itemKor.Size" type="System.Drawing.Size, System.Drawing">
-        <value>112, 22</value>
+        <value>139, 26</value>
     </data>
     <data name="itemKor.Text" xml:space="preserve">
     <value>한국어</value>
   </data>
     <data name="itemEng.Size" type="System.Drawing.Size, System.Drawing">
-        <value>112, 22</value>
+        <value>139, 26</value>
     </data>
     <data name="itemEng.Text" xml:space="preserve">
     <value>English</value>
   </data>
     <data name="stripLang.Size" type="System.Drawing.Size, System.Drawing">
-        <value>71, 20</value>
+        <value>88, 24</value>
     </data>
     <data name="stripLang.Text" xml:space="preserve">
     <value>&amp;Language</value>
   </data>
     <data name="itemVersion.Size" type="System.Drawing.Size, System.Drawing">
-        <value>155, 22</value>
+        <value>194, 26</value>
     </data>
     <data name="itemVersion.Text" xml:space="preserve">
     <value>Check Update</value>
   </data>
     <data name="itemVersionGUI.Size" type="System.Drawing.Size, System.Drawing">
-        <value>155, 22</value>
+        <value>194, 26</value>
     </data>
     <data name="itemVersionGUI.Text" xml:space="preserve">
     <value>itemVersionGUI</value>
   </data>
     <data name="itemBar.Size" type="System.Drawing.Size, System.Drawing">
-        <value>152, 6</value>
+        <value>191, 6</value>
     </data>
     <data name="itemAbout.Size" type="System.Drawing.Size, System.Drawing">
-        <value>155, 22</value>
+        <value>194, 26</value>
     </data>
     <data name="itemAbout.Text" xml:space="preserve">
     <value>About</value>
   </data>
     <data name="stripHelp.Size" type="System.Drawing.Size, System.Drawing">
-        <value>44, 20</value>
+        <value>55, 24</value>
     </data>
     <data name="stripHelp.Text" xml:space="preserve">
     <value>&amp;Help</value>
@@ -215,11 +215,8 @@
     <data name="menuStrip.Location" type="System.Drawing.Point, System.Drawing">
         <value>0, 0</value>
     </data>
-    <data name="menuStrip.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-        <value>5, 2, 0, 2</value>
-    </data>
     <data name="menuStrip.Size" type="System.Drawing.Size, System.Drawing">
-        <value>474, 24</value>
+        <value>383, 28</value>
     </data>
     <data name="menuStrip.TabIndex" type="System.Int32, mscorlib">
         <value>3</value>
@@ -251,13 +248,13 @@
         <value>NoControl</value>
     </data>
     <data name="radioOpera.Location" type="System.Drawing.Point, System.Drawing">
-        <value>243, 19</value>
+        <value>278, 24</value>
     </data>
     <data name="radioOpera.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
         <value>3, 2, 3, 2</value>
     </data>
     <data name="radioOpera.Size" type="System.Drawing.Size, System.Drawing">
-        <value>57, 16</value>
+        <value>68, 19</value>
     </data>
     <data name="radioOpera.TabIndex" type="System.Int32, mscorlib">
         <value>3</value>
@@ -284,13 +281,13 @@
         <value>NoControl</value>
     </data>
     <data name="radioFirefox.Location" type="System.Drawing.Point, System.Drawing">
-        <value>162, 19</value>
+        <value>185, 24</value>
     </data>
     <data name="radioFirefox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
         <value>3, 2, 3, 2</value>
     </data>
     <data name="radioFirefox.Size" type="System.Drawing.Size, System.Drawing">
-        <value>61, 16</value>
+        <value>73, 19</value>
     </data>
     <data name="radioFirefox.TabIndex" type="System.Int32, mscorlib">
         <value>2</value>
@@ -317,13 +314,13 @@
         <value>NoControl</value>
     </data>
     <data name="radioChrome.Location" type="System.Drawing.Point, System.Drawing">
-        <value>74, 19</value>
+        <value>85, 24</value>
     </data>
     <data name="radioChrome.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
         <value>3, 2, 3, 2</value>
     </data>
     <data name="radioChrome.Size" type="System.Drawing.Size, System.Drawing">
-        <value>68, 16</value>
+        <value>78, 19</value>
     </data>
     <data name="radioChrome.TabIndex" type="System.Int32, mscorlib">
         <value>1</value>
@@ -347,13 +344,13 @@
         <value>True</value>
     </data>
     <data name="radioEdge.Location" type="System.Drawing.Point, System.Drawing">
-        <value>5, 19</value>
+        <value>6, 24</value>
     </data>
     <data name="radioEdge.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
         <value>3, 2, 3, 2</value>
     </data>
     <data name="radioEdge.Size" type="System.Drawing.Size, System.Drawing">
-        <value>52, 16</value>
+        <value>61, 19</value>
     </data>
     <data name="radioEdge.TabIndex" type="System.Int32, mscorlib">
         <value>0</value>
@@ -374,7 +371,7 @@
     <value>3</value>
   </data>
     <data name="groupBrowser.Location" type="System.Drawing.Point, System.Drawing">
-        <value>10, 47</value>
+        <value>11, 59</value>
     </data>
     <data name="groupBrowser.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
         <value>3, 2, 3, 2</value>
@@ -383,7 +380,7 @@
         <value>3, 2, 3, 2</value>
     </data>
     <data name="groupBrowser.Size" type="System.Drawing.Size, System.Drawing">
-        <value>314, 40</value>
+        <value>359, 50</value>
     </data>
     <data name="groupBrowser.TabIndex" type="System.Int32, mscorlib">
         <value>4</value>
@@ -404,13 +401,13 @@
     <value>4</value>
   </data>
     <data name="btnStart.Location" type="System.Drawing.Point, System.Drawing">
-        <value>241, 96</value>
+        <value>275, 120</value>
     </data>
     <data name="btnStart.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
         <value>3, 2, 3, 2</value>
     </data>
     <data name="btnStart.Size" type="System.Drawing.Size, System.Drawing">
-        <value>82, 23</value>
+        <value>94, 29</value>
     </data>
     <data name="btnStart.TabIndex" type="System.Int32, mscorlib">
         <value>5</value>
@@ -431,7 +428,7 @@
     <value>3</value>
   </data>
     <data name="textBox1.Location" type="System.Drawing.Point, System.Drawing">
-        <value>9, 124</value>
+        <value>10, 155</value>
     </data>
     <data name="textBox1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
         <value>3, 2, 3, 2</value>
@@ -443,7 +440,7 @@
         <value>Vertical</value>
     </data>
     <data name="textBox1.Size" type="System.Drawing.Size, System.Drawing">
-        <value>315, 170</value>
+        <value>359, 212</value>
     </data>
     <data name="textBox1.TabIndex" type="System.Int32, mscorlib">
         <value>6</value>
@@ -460,223 +457,79 @@
     <data name="&gt;&gt;textBox1.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-    <data name="cbTag.AutoSize" type="System.Boolean, mscorlib">
-        <value>True</value>
-    </data>
-    <data name="cbTag.Location" type="System.Drawing.Point, System.Drawing">
-        <value>132, 100</value>
-    </data>
-    <data name="cbTag.Size" type="System.Drawing.Size, System.Drawing">
-        <value>106, 16</value>
-    </data>
-    <data name="cbTag.TabIndex" type="System.Int32, mscorlib">
-        <value>7</value>
-    </data>
-    <data name="cbTag.Text" xml:space="preserve">
-    <value>Search Tag(#)</value>
-  </data>
-    <data name="&gt;&gt;cbTag.Name" xml:space="preserve">
-    <value>cbTag</value>
-  </data>
-    <data name="&gt;&gt;cbTag.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-    <data name="&gt;&gt;cbTag.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-    <data name="&gt;&gt;cbTag.ZOrder" xml:space="preserve">
+    <data name="comboBox1.Items" xml:space="preserve">
     <value>1</value>
   </data>
-    <data name="listCookie.ItemHeight" type="System.Int32, mscorlib">
-        <value>12</value>
-    </data>
-    <data name="listCookie.Location" type="System.Drawing.Point, System.Drawing">
-        <value>6, 98</value>
-    </data>
-    <data name="listCookie.Size" type="System.Drawing.Size, System.Drawing">
-        <value>121, 100</value>
-    </data>
-    <data name="listCookie.TabIndex" type="System.Int32, mscorlib">
-        <value>7</value>
-    </data>
-    <data name="&gt;&gt;listCookie.Name" xml:space="preserve">
-    <value>listCookie</value>
-  </data>
-    <data name="&gt;&gt;listCookie.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-    <data name="&gt;&gt;listCookie.Parent" xml:space="preserve">
-    <value>gbCookie</value>
-  </data>
-    <data name="&gt;&gt;listCookie.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-    <data name="btnCookAdd.Location" type="System.Drawing.Point, System.Drawing">
-        <value>6, 209</value>
-    </data>
-    <data name="btnCookAdd.Size" type="System.Drawing.Size, System.Drawing">
-        <value>121, 23</value>
-    </data>
-    <data name="btnCookAdd.TabIndex" type="System.Int32, mscorlib">
-        <value>6</value>
-    </data>
-    <data name="btnCookAdd.Text" xml:space="preserve">
-    <value>Add</value>
-  </data>
-    <data name="&gt;&gt;btnCookAdd.Name" xml:space="preserve">
-    <value>btnCookAdd</value>
-  </data>
-    <data name="&gt;&gt;btnCookAdd.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-    <data name="&gt;&gt;btnCookAdd.Parent" xml:space="preserve">
-    <value>gbCookie</value>
-  </data>
-    <data name="&gt;&gt;btnCookAdd.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-    <data name="btnCookDel.Location" type="System.Drawing.Point, System.Drawing">
-        <value>6, 238</value>
-    </data>
-    <data name="btnCookDel.Size" type="System.Drawing.Size, System.Drawing">
-        <value>121, 23</value>
-    </data>
-    <data name="btnCookDel.TabIndex" type="System.Int32, mscorlib">
-        <value>5</value>
-    </data>
-    <data name="btnCookDel.Text" xml:space="preserve">
-    <value>Del All</value>
-  </data>
-    <data name="&gt;&gt;btnCookDel.Name" xml:space="preserve">
-    <value>btnCookDel</value>
-  </data>
-    <data name="&gt;&gt;btnCookDel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-    <data name="&gt;&gt;btnCookDel.Parent" xml:space="preserve">
-    <value>gbCookie</value>
-  </data>
-    <data name="&gt;&gt;btnCookDel.ZOrder" xml:space="preserve">
+    <data name="comboBox1.Items1" xml:space="preserve">
     <value>2</value>
   </data>
-    <data name="lbel_cookieValue.AutoSize" type="System.Boolean, mscorlib">
-        <value>True</value>
-    </data>
-    <data name="lbel_cookieValue.Location" type="System.Drawing.Point, System.Drawing">
-        <value>6, 56</value>
-    </data>
-    <data name="lbel_cookieValue.Size" type="System.Drawing.Size, System.Drawing">
-        <value>84, 12</value>
-    </data>
-    <data name="lbel_cookieValue.TabIndex" type="System.Int32, mscorlib">
-        <value>3</value>
-    </data>
-    <data name="lbel_cookieValue.Text" xml:space="preserve">
-    <value>Cookie Value:</value>
-  </data>
-    <data name="&gt;&gt;lbel_cookieValue.Name" xml:space="preserve">
-    <value>lbel_cookieValue</value>
-  </data>
-    <data name="&gt;&gt;lbel_cookieValue.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-    <data name="&gt;&gt;lbel_cookieValue.Parent" xml:space="preserve">
-    <value>gbCookie</value>
-  </data>
-    <data name="&gt;&gt;lbel_cookieValue.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-    <data name="lbl_cookieName.AutoSize" type="System.Boolean, mscorlib">
-        <value>True</value>
-    </data>
-    <data name="lbl_cookieName.Location" type="System.Drawing.Point, System.Drawing">
-        <value>6, 17</value>
-    </data>
-    <data name="lbl_cookieName.Size" type="System.Drawing.Size, System.Drawing">
-        <value>86, 12</value>
-    </data>
-    <data name="lbl_cookieName.TabIndex" type="System.Int32, mscorlib">
-        <value>2</value>
-    </data>
-    <data name="lbl_cookieName.Text" xml:space="preserve">
-    <value>Cookie Name:</value>
-  </data>
-    <data name="&gt;&gt;lbl_cookieName.Name" xml:space="preserve">
-    <value>lbl_cookieName</value>
-  </data>
-    <data name="&gt;&gt;lbl_cookieName.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-    <data name="&gt;&gt;lbl_cookieName.Parent" xml:space="preserve">
-    <value>gbCookie</value>
-  </data>
-    <data name="&gt;&gt;lbl_cookieName.ZOrder" xml:space="preserve">
+    <data name="comboBox1.Items2" xml:space="preserve">
     <value>4</value>
   </data>
-    <data name="tb_cookieValue.Location" type="System.Drawing.Point, System.Drawing">
-        <value>6, 71</value>
-    </data>
-    <data name="tb_cookieValue.Size" type="System.Drawing.Size, System.Drawing">
-        <value>121, 21</value>
-    </data>
-    <data name="tb_cookieValue.TabIndex" type="System.Int32, mscorlib">
-        <value>1</value>
-    </data>
-    <data name="&gt;&gt;tb_cookieValue.Name" xml:space="preserve">
-    <value>tb_cookieValue</value>
-  </data>
-    <data name="&gt;&gt;tb_cookieValue.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-    <data name="&gt;&gt;tb_cookieValue.Parent" xml:space="preserve">
-    <value>gbCookie</value>
-  </data>
-    <data name="&gt;&gt;tb_cookieValue.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-    <data name="tb_cookieName.Location" type="System.Drawing.Point, System.Drawing">
-        <value>6, 32</value>
-    </data>
-    <data name="tb_cookieName.Size" type="System.Drawing.Size, System.Drawing">
-        <value>121, 21</value>
-    </data>
-    <data name="tb_cookieName.TabIndex" type="System.Int32, mscorlib">
-        <value>0</value>
-    </data>
-    <data name="&gt;&gt;tb_cookieName.Name" xml:space="preserve">
-    <value>tb_cookieName</value>
-  </data>
-    <data name="&gt;&gt;tb_cookieName.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-    <data name="&gt;&gt;tb_cookieName.Parent" xml:space="preserve">
-    <value>gbCookie</value>
-  </data>
-    <data name="&gt;&gt;tb_cookieName.ZOrder" xml:space="preserve">
+    <data name="comboBox1.Items3" xml:space="preserve">
     <value>6</value>
   </data>
-    <data name="gbCookie.Location" type="System.Drawing.Point, System.Drawing">
-        <value>332, 27</value>
-    </data>
-    <data name="gbCookie.Size" type="System.Drawing.Size, System.Drawing">
-        <value>133, 267</value>
-    </data>
-    <data name="gbCookie.TabIndex" type="System.Int32, mscorlib">
-        <value>8</value>
-    </data>
-    <data name="gbCookie.Text" xml:space="preserve">
-    <value>Cookie</value>
+    <data name="comboBox1.Items4" xml:space="preserve">
+    <value>8</value>
   </data>
-    <data name="&gt;&gt;gbCookie.Name" xml:space="preserve">
-    <value>gbCookie</value>
+    <data name="comboBox1.Items5" xml:space="preserve">
+    <value>10</value>
   </data>
-    <data name="&gt;&gt;gbCookie.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <data name="comboBox1.Items6" xml:space="preserve">
+    <value>16</value>
   </data>
-    <data name="&gt;&gt;gbCookie.Parent" xml:space="preserve">
+    <data name="comboBox1.Items7" xml:space="preserve">
+    <value>32</value>
+  </data>
+    <data name="comboBox1.Location" type="System.Drawing.Point, System.Drawing">
+        <value>87, 123</value>
+    </data>
+    <data name="comboBox1.Size" type="System.Drawing.Size, System.Drawing">
+        <value>53, 23</value>
+    </data>
+    <data name="comboBox1.TabIndex" type="System.Int32, mscorlib">
+        <value>7</value>
+    </data>
+    <data name="comboBox1.Text" xml:space="preserve">
+    <value>4</value>
+  </data>
+    <data name="&gt;&gt;comboBox1.Name" xml:space="preserve">
+    <value>comboBox1</value>
+  </data>
+    <data name="&gt;&gt;comboBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+    <data name="&gt;&gt;comboBox1.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-    <data name="&gt;&gt;gbCookie.ZOrder" xml:space="preserve">
+    <data name="&gt;&gt;comboBox1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+    <data name="lbl_Threads.AutoSize" type="System.Boolean, mscorlib">
+        <value>True</value>
+    </data>
+    <data name="lbl_Threads.Location" type="System.Drawing.Point, System.Drawing">
+        <value>12, 127</value>
+    </data>
+    <data name="lbl_Threads.Size" type="System.Drawing.Size, System.Drawing">
+        <value>69, 15</value>
+    </data>
+    <data name="lbl_Threads.TabIndex" type="System.Int32, mscorlib">
+        <value>8</value>
+    </data>
+    <data name="lbl_Threads.Text" xml:space="preserve">
+    <value>Threads: </value>
+  </data>
+    <data name="&gt;&gt;lbl_Threads.Name" xml:space="preserve">
+    <value>lbl_Threads</value>
+  </data>
+    <data name="&gt;&gt;lbl_Threads.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+    <data name="&gt;&gt;lbl_Threads.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+    <data name="&gt;&gt;lbl_Threads.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
     <metadata name="$this.Localizable"
@@ -688,10 +541,10 @@
         <value>81</value>
     </metadata>
     <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-        <value>7, 12</value>
+        <value>8, 15</value>
     </data>
     <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-        <value>474, 304</value>
+        <value>383, 380</value>
     </data>
     <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
         <value>Gulim, 9pt</value>

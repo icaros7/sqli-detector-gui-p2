@@ -123,15 +123,6 @@ namespace selenium_gui_winform {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 태그(#) 검색.
-        /// </summary>
-        public static string cbTag {
-            get {
-                return ResourceManager.GetString("cbTag", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to 언어를 한국어로 바꾸었습니다..
         /// </summary>
         public static string changeLang {

@@ -310,7 +310,6 @@ public partial class Form1 : Form {
             textBox1.AppendText("\r\n" + @"[INFO] Start detection" + "\r\n");
             textBox1.AppendText(@"Browser: " + _browser + "\r\n");
             textBox1.AppendText(@"URL: " + tbURL.Text + "\r\n");
-            textBox1.AppendText(@"Tag: " + cbTag.Checked + "\r\n");
             textBox1.AppendText(@"------------------------------" + "\r\n");
             textBox1.AppendText(res.waitForEnd + "\r\n");
             btnStart.Text = res.btnStop;
@@ -325,7 +324,7 @@ public partial class Form1 : Form {
                 Psi = new ProcessStartInfo {
                     FileName = @"python",
                     Arguments = ".\\execute\\main.py --browser=\"" + _browser + "\" --url=\"" + tbURL.Text +
-                                "\" --tag=\"" + cbTag.Checked + "\" --cookie=\"" + cookie_str + "\"",
+                                "\"",
                     RedirectStandardOutput = true,
                     RedirectStandardError  = true,
                     CreateNoWindow         = true
@@ -354,7 +353,6 @@ public partial class Form1 : Form {
     private void Form1_Load(object sender, EventArgs e) {
         if (Settings.Default.saveSettings) {
             if (Settings.Default.saveSettings) cbSave.Checked = true;
-            if (Settings.Default.searchTag) cbTag.Checked     = true;
             tbURL.Text = Settings.Default.lastURL;
             switch (Settings.Default.lastBrowser) {
                 case 0:
@@ -440,30 +438,5 @@ public partial class Form1 : Form {
 
     private void itemExit_Click(object sender, EventArgs e) {
         Application.Exit();
-    }
-
-    private void btnCookAdd_Click(object sender, EventArgs e) {
-        if (tb_cookieName.Text == "" || tb_cookieValue.Text == "") {
-            MessageBox.Show(res.noCookieName, res.information, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            return;
-        }
-
-        cookie.Add(tb_cookieName.Text, tb_cookieValue.Text);
-        listCookie.Items.Add(tb_cookieName.Text);
-        listCookie.Items.Add(tb_cookieValue.Text);
-        listCookie.Items.Add("");
-
-        tb_cookieName.Text  = "";
-        tb_cookieValue.Text = "";
-    }
-
-    private void btnCookDel_Click(object sender, EventArgs e) {
-        if (cookie.Count == 0) {
-            MessageBox.Show(res.noCookieList, res.error, MessageBoxButtons.OK, MessageBoxIcon.Error);
-            return;
-        }
-
-        listCookie.Items.Clear();
-        cookie.Clear();
     }
 }
