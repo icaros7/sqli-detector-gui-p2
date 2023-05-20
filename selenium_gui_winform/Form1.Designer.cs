@@ -47,13 +47,13 @@
             textBox1 = new TextBox();
             cbTag = new CheckBox();
             gbCookie = new GroupBox();
+            listCookie = new ListBox();
             btnCookAdd = new Button();
             btnCookDel = new Button();
             lbel_cookieValue = new Label();
             lbl_cookieName = new Label();
             tb_cookieValue = new TextBox();
             tb_cookieName = new TextBox();
-            listCookie = new ListBox();
             menuStrip.SuspendLayout();
             groupBrowser.SuspendLayout();
             gbCookie.SuspendLayout();
@@ -217,6 +217,12 @@
             gbCookie.Name = "gbCookie";
             gbCookie.TabStop = false;
             // 
+            // listCookie
+            // 
+            listCookie.FormattingEnabled = true;
+            resources.ApplyResources(listCookie, "listCookie");
+            listCookie.Name = "listCookie";
+            // 
             // btnCookAdd
             // 
             resources.ApplyResources(btnCookAdd, "btnCookAdd");
@@ -250,12 +256,6 @@
             // 
             resources.ApplyResources(tb_cookieName, "tb_cookieName");
             tb_cookieName.Name = "tb_cookieName";
-            // 
-            // listCookie
-            // 
-            listCookie.FormattingEnabled = true;
-            resources.ApplyResources(listCookie, "listCookie");
-            listCookie.Name = "listCookie";
             // 
             // Form1
             // 

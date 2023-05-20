@@ -9,8 +9,8 @@ namespace selenium_gui_winform;
 public partial class Form1 : Form {
     private static ProcessStartInfo? Psi;
     private static Process? Proc;
-    private string _browser = @"Edge";
     private readonly Dictionary<string, string> cookie = new();
+    private string _browser = @"Edge";
 
     public Form1() {
         InitializeComponent();
