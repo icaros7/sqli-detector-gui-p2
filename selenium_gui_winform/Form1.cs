@@ -94,23 +94,18 @@ public partial class Form1 : Form {
 
     private void LangInit() {
         // Apply Localization
-        Text                  = res.appName;
-        labelTarget.Text      = res.labelTarget + @": ";
-        cbSave.Text           = res.cbSave;
-        stripFile.Text        = res.stripFile;
-        stripLang.Text        = res.stripLang;
-        stripHelp.Text        = res.stripHelp;
-        itemAbout.Text        = res.itemAbout;
-        itemExit.Text         = res.itemExit;
-        itemVersion.Text      = res.itemVersion;
-        itemVersionGUI.Text   = res.itemVersionGUI;
-        groupBrowser.Text     = res.groupBrowser;
-        btnStart.Text         = res.btnStart;
-        cbTag.Text            = res.cbTag;
-        lbl_cookieName.Text   = res.lblCookName;
-        lbel_cookieValue.Text = res.lblCookValue;
-        btnCookAdd.Text       = res.btnCookAdd;
-        btnCookDel.Text       = res.btnCookDel;
+        Text                = res.appName;
+        labelTarget.Text    = res.labelTarget + @": ";
+        cbSave.Text         = res.cbSave;
+        stripFile.Text      = res.stripFile;
+        stripLang.Text      = res.stripLang;
+        stripHelp.Text      = res.stripHelp;
+        itemAbout.Text      = res.itemAbout;
+        itemExit.Text       = res.itemExit;
+        itemVersion.Text    = res.itemVersion;
+        itemVersionGUI.Text = res.itemVersionGUI;
+        groupBrowser.Text   = res.groupBrowser;
+        btnStart.Text       = res.btnStart;
     }
 
     /// <summary>
@@ -177,17 +172,6 @@ public partial class Form1 : Form {
 
         textBox1.AppendText(@"[INFO] Finished." + "\r\n");
         btnStart.Text = res.btnStart;
-
-        /* var reg = new Regex(@"://(?<host>([a-z\d][-a-z\d]*[a-z\d]\.)*[a-z][-a-z\d]+[a-z])");
-        var workdir = Application.StartupPath + reg.Match(tbURL.Text).Result("${host}");
-
-        try {
-            Process.Start(workdir);
-        }
-        catch (Win32Exception) {
-            MessageBox.Show(res.doneCrawl + "\n\n" + res.downPath + workdir, res.information, MessageBoxButtons.OK,
-                MessageBoxIcon.Information);
-        }*/
     }
 
     private void itemEng_Click(object sender, EventArgs e) {
