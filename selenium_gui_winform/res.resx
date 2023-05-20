@@ -218,22 +218,55 @@
     <data name="itemVersionGUI" xml:space="preserve">
     <value>Check update App</value>
   </data>
-    <data name="btnCookAdd" xml:space="preserve">
-    <value>Add</value>
-  </data>
-    <data name="btnCookDel" xml:space="preserve">
-    <value>Delete All Cookie</value>
-  </data>
-    <data name="lblCookName" xml:space="preserve">
-    <value>Cookie Name:</value>
-  </data>
-    <data name="lblCookValue" xml:space="preserve">
-    <value>Cookie Value:</value>
-  </data>
-    <data name="noCookieName" xml:space="preserve">
-    <value>You must be set cookie's name or value.</value>
-  </data>
-    <data name="noCookieList" xml:space="preserve">
-    <value>The cookie list is empty</value>
-  </data>
+    <data name="lbl_Target" xml:space="preserve">
+        <value>Target</value>
+    </data>
+    <data name="lbl_CountOfScan" xml:space="preserve">
+        <value>Count of Page</value>
+    </data>
+    <data name="lbl_Status" xml:space="preserve">
+        <value>Report Status</value>
+    </data>
+    <data name="status_NotFound" xml:space="preserve">
+        <value>Not found vulnerable point</value>
+    </data>
+    <data name="status_Found" xml:space="preserve">
+        <value>FOUND Vulerable Point</value>
+    </data>
+    <data name="lbl_CountOfDetect" xml:space="preserve">
+        <value>Count of Find</value>
+    </data>
+    <data name="gb_Deatil" xml:space="preserve">
+        <value>Detail Information</value>
+    </data>
+    <data name="text_1" xml:space="preserve">
+        <value>You know what? TIPs</value>
+    </data>
+    <data name="text_2" xml:space="preserve">
+        <value>SQLI is not difficult tech-skill for even you.</value>
+    </data>
+    <data name="text_3" xml:space="preserve">
+        <value>SQLI is just tiresome &amp; tedious works.</value>
+    </data>
+    <data name="text_4" xml:space="preserve">
+        <value>But can cause CRITICAL consequences.</value>
+    </data>
+    <data name="text_0" xml:space="preserve">
+        <value>FOUND SQL Injection vulnerable point at </value>
+    </data>
+    <data name="link_ReadMore" xml:space="preserve">
+        <value>Read More about SQLi</value>
+    </data>
+    <data name="btn_SaveAs" xml:space="preserve">
+        <value>Save As .txt</value>
+    </data>
+    <data name="btn_Exit" xml:space="preserve">
+        <value>Close</value>
+    </data>
+    <data name="string_EndScanReport" xml:space="preserve">
+        <value>End Scan Report</value>
+    </data>
+    <data name="string_NotSave" xml:space="preserve">
+        <value>Do you want close this report? You didn't save this report.</value>
+    </data>
 </root>

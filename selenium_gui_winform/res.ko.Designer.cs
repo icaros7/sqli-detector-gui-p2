@@ -78,20 +78,20 @@ namespace selenium_gui_winform {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 추가.
+        ///   Looks up a localized string similar to 닫기.
         /// </summary>
-        public static string btnCookAdd {
+        public static string btn_Exit {
             get {
-                return ResourceManager.GetString("btnCookAdd", resourceCulture);
+                return ResourceManager.GetString("btn_Exit", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 쿠기 전체 삭제.
+        ///   Looks up a localized string similar to .txt로 저장.
         /// </summary>
-        public static string btnCookDel {
+        public static string btn_SaveAs {
             get {
-                return ResourceManager.GetString("btnCookDel", resourceCulture);
+                return ResourceManager.GetString("btn_SaveAs", resourceCulture);
             }
         }
         
@@ -186,6 +186,15 @@ namespace selenium_gui_winform {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 자세한 정보.
+        /// </summary>
+        public static string gb_Deatil {
+            get {
+                return ResourceManager.GetString("gb_Deatil", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 브라우저 선택.
         /// </summary>
         public static string groupBrowser {
@@ -249,20 +258,47 @@ namespace selenium_gui_winform {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 쿠키 이름:.
+        ///   Looks up a localized string similar to 찾은 포인트.
         /// </summary>
-        public static string lblCookName {
+        public static string lbl_CountOfDetect {
             get {
-                return ResourceManager.GetString("lblCookName", resourceCulture);
+                return ResourceManager.GetString("lbl_CountOfDetect", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 쿠키 값:.
+        ///   Looks up a localized string similar to 찾은 페이지.
         /// </summary>
-        public static string lblCookValue {
+        public static string lbl_CountOfScan {
             get {
-                return ResourceManager.GetString("lblCookValue", resourceCulture);
+                return ResourceManager.GetString("lbl_CountOfScan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 보고 상태.
+        /// </summary>
+        public static string lbl_Status {
+            get {
+                return ResourceManager.GetString("lbl_Status", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 대상.
+        /// </summary>
+        public static string lbl_Target {
+            get {
+                return ResourceManager.GetString("lbl_Target", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SQLi에 대해 더 알아보기.
+        /// </summary>
+        public static string link_ReadMore {
+            get {
+                return ResourceManager.GetString("link_ReadMore", resourceCulture);
             }
         }
         
@@ -272,24 +308,6 @@ namespace selenium_gui_winform {
         public static string newVersion {
             get {
                 return ResourceManager.GetString("newVersion", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 쿠키 리스트가 비어있습니다.
-        /// </summary>
-        public static string noCookieList {
-            get {
-                return ResourceManager.GetString("noCookieList", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 쿠키의 이름 또는 값을 설정 해야 합니다..
-        /// </summary>
-        public static string noCookieName {
-            get {
-                return ResourceManager.GetString("noCookieName", resourceCulture);
             }
         }
         
@@ -308,6 +326,42 @@ namespace selenium_gui_winform {
         public static string seleniumNotFound {
             get {
                 return ResourceManager.GetString("seleniumNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 취약 지점 발견.
+        /// </summary>
+        public static string status_Found {
+            get {
+                return ResourceManager.GetString("status_Found", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 취약한 포인트를 찾지 못함.
+        /// </summary>
+        public static string status_NotFound {
+            get {
+                return ResourceManager.GetString("status_NotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 최종 검진 보고서.
+        /// </summary>
+        public static string string_EndScanReport {
+            get {
+                return ResourceManager.GetString("string_EndScanReport", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 보고서를 닫으시겠습니까? 아직 저장되지 않았습니다..
+        /// </summary>
+        public static string string_NotSave {
+            get {
+                return ResourceManager.GetString("string_NotSave", resourceCulture);
             }
         }
         

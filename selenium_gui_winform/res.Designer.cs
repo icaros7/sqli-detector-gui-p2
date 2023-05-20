@@ -78,20 +78,20 @@ namespace selenium_gui_winform {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Add.
+        ///   Looks up a localized string similar to Close.
         /// </summary>
-        public static string btnCookAdd {
+        public static string btn_Exit {
             get {
-                return ResourceManager.GetString("btnCookAdd", resourceCulture);
+                return ResourceManager.GetString("btn_Exit", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Delete All Cookie.
+        ///   Looks up a localized string similar to Save As .txt.
         /// </summary>
-        public static string btnCookDel {
+        public static string btn_SaveAs {
             get {
-                return ResourceManager.GetString("btnCookDel", resourceCulture);
+                return ResourceManager.GetString("btn_SaveAs", resourceCulture);
             }
         }
         
@@ -186,6 +186,15 @@ namespace selenium_gui_winform {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Detail Information.
+        /// </summary>
+        public static string gb_Deatil {
+            get {
+                return ResourceManager.GetString("gb_Deatil", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Select Browser.
         /// </summary>
         public static string groupBrowser {
@@ -249,20 +258,47 @@ namespace selenium_gui_winform {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Cookie Name:.
+        ///   Looks up a localized string similar to Count of Find.
         /// </summary>
-        public static string lblCookName {
+        public static string lbl_CountOfDetect {
             get {
-                return ResourceManager.GetString("lblCookName", resourceCulture);
+                return ResourceManager.GetString("lbl_CountOfDetect", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Cookie Value:.
+        ///   Looks up a localized string similar to Count of Page.
         /// </summary>
-        public static string lblCookValue {
+        public static string lbl_CountOfScan {
             get {
-                return ResourceManager.GetString("lblCookValue", resourceCulture);
+                return ResourceManager.GetString("lbl_CountOfScan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Report Status.
+        /// </summary>
+        public static string lbl_Status {
+            get {
+                return ResourceManager.GetString("lbl_Status", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Target.
+        /// </summary>
+        public static string lbl_Target {
+            get {
+                return ResourceManager.GetString("lbl_Target", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Read More about SQLi.
+        /// </summary>
+        public static string link_ReadMore {
+            get {
+                return ResourceManager.GetString("link_ReadMore", resourceCulture);
             }
         }
         
@@ -272,24 +308,6 @@ namespace selenium_gui_winform {
         public static string newVersion {
             get {
                 return ResourceManager.GetString("newVersion", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The cookie list is empty.
-        /// </summary>
-        public static string noCookieList {
-            get {
-                return ResourceManager.GetString("noCookieList", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to You must be set cookie&apos;s name or value..
-        /// </summary>
-        public static string noCookieName {
-            get {
-                return ResourceManager.GetString("noCookieName", resourceCulture);
             }
         }
         
@@ -308,6 +326,42 @@ namespace selenium_gui_winform {
         public static string seleniumNotFound {
             get {
                 return ResourceManager.GetString("seleniumNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to FOUND Vulerable Point.
+        /// </summary>
+        public static string status_Found {
+            get {
+                return ResourceManager.GetString("status_Found", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Not found vulnerable point.
+        /// </summary>
+        public static string status_NotFound {
+            get {
+                return ResourceManager.GetString("status_NotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to End Scan Report.
+        /// </summary>
+        public static string string_EndScanReport {
+            get {
+                return ResourceManager.GetString("string_EndScanReport", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Do you want close this report? You didn&apos;t save this report..
+        /// </summary>
+        public static string string_NotSave {
+            get {
+                return ResourceManager.GetString("string_NotSave", resourceCulture);
             }
         }
         
@@ -335,6 +389,51 @@ namespace selenium_gui_winform {
         public static string stripLang {
             get {
                 return ResourceManager.GetString("stripLang", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to FOUND SQL Injection vulnerable point at .
+        /// </summary>
+        public static string text_0 {
+            get {
+                return ResourceManager.GetString("text_0", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You know what? TIPs.
+        /// </summary>
+        public static string text_1 {
+            get {
+                return ResourceManager.GetString("text_1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SQLI is not difficult tech-skill for even you..
+        /// </summary>
+        public static string text_2 {
+            get {
+                return ResourceManager.GetString("text_2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SQLI is just tiresome &amp; tedious works..
+        /// </summary>
+        public static string text_3 {
+            get {
+                return ResourceManager.GetString("text_3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to But can cause CRITICAL consequences..
+        /// </summary>
+        public static string text_4 {
+            get {
+                return ResourceManager.GetString("text_4", resourceCulture);
             }
         }
         

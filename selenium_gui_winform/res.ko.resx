@@ -218,22 +218,40 @@
     <data name="itemVersionGUI" xml:space="preserve">
     <value>앱 업데이트 확인</value>
   </data>
-    <data name="btnCookAdd" xml:space="preserve">
-    <value>추가</value>
-  </data>
-    <data name="btnCookDel" xml:space="preserve">
-    <value>쿠기 전체 삭제</value>
-  </data>
-    <data name="lblCookName" xml:space="preserve">
-    <value>쿠키 이름:</value>
-  </data>
-    <data name="lblCookValue" xml:space="preserve">
-    <value>쿠키 값:</value>
-  </data>
-    <data name="noCookieName" xml:space="preserve">
-    <value>쿠키의 이름 또는 값을 설정 해야 합니다.</value>
-  </data>
-    <data name="noCookieList" xml:space="preserve">
-    <value>쿠키 리스트가 비어있습니다</value>
-  </data>
+    <data name="gb_Deatil" xml:space="preserve">
+        <value>자세한 정보</value>
+    </data>
+    <data name="lbl_CountOfDetect" xml:space="preserve">
+        <value>찾은 포인트</value>
+    </data>
+    <data name="lbl_CountOfScan" xml:space="preserve">
+        <value>찾은 페이지</value>
+    </data>
+    <data name="lbl_Status" xml:space="preserve">
+        <value>보고 상태</value>
+    </data>
+    <data name="lbl_Target" xml:space="preserve">
+        <value>대상</value>
+    </data>
+    <data name="link_ReadMore" xml:space="preserve">
+        <value>SQLi에 대해 더 알아보기</value>
+    </data>
+    <data name="btn_SaveAs" xml:space="preserve">
+        <value>.txt로 저장</value>
+    </data>
+    <data name="btn_Exit" xml:space="preserve">
+        <value>닫기</value>
+    </data>
+    <data name="string_EndScanReport" xml:space="preserve">
+        <value>최종 검진 보고서</value>
+    </data>
+    <data name="status_Found" xml:space="preserve">
+        <value>취약 지점 발견</value>
+    </data>
+    <data name="status_NotFound" xml:space="preserve">
+        <value>취약한 포인트를 찾지 못함</value>
+    </data>
+    <data name="string_NotSave" xml:space="preserve">
+        <value>보고서를 닫으시겠습니까? 아직 저장되지 않았습니다.</value>
+    </data>
 </root>
