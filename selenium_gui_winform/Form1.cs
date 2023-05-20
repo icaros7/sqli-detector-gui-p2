@@ -43,7 +43,7 @@ public partial class Form1 : Form {
             }
         }
 
-        comboThread.SelectedIndex = 3;
+        comboThread.SelectedIndex = 2;
     }
 
     /// <summary>
