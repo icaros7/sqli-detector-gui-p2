@@ -6,10 +6,10 @@
         <Nullable>enable</Nullable>
         <UseWindowsForms>true</UseWindowsForms>
         <ImplicitUsings>enable</ImplicitUsings>
-        <RepositoryUrl>https://github.com/icaros7/sqli-detection-gui</RepositoryUrl>
+        <RepositoryUrl>https://github.com/ksj-10th-a09/sqli-detection-gui</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
         <PublishSingleFile>true</PublishSingleFile>
-        <Version>1.0.1</Version>
+        <Version>1.0.2</Version>
         <Title>Selenium SQLi Detector</Title>
         <Authors>K-Shield Jr. 10th A-09</Authors>
         <Company>K-Shield Jr. 10th A-09</Company>

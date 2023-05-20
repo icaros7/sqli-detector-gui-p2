@@ -35,11 +35,14 @@ public partial class Form1 : Form {
                     "https://github.com/ksj-10th-a09/selenium_crawl_p1/releases/latest/download/main.py",
                     path + @"\main.py");
                 wc.DownloadFile(
-                    "https://github.com/ksj-10th-a09/selenium_crawl_p1/releases/latest/download/crawler.py",
-                    path + @"\crawler.py");
+                    "https://github.com/ksj-10th-a09/selenium_crawl_p1/releases/latest/download/final_a_href_crawl.py",
+                    path + @"\final_a_href_crawl.py");
                 wc.DownloadFile(
-                    "https://github.com/ksj-10th-a09/selenium_crawl_p1/releases/latest/download/get_html.py",
-                    path + @"\get_html.py");
+                    "https://github.com/ksj-10th-a09/selenium_crawl_p1/releases/latest/download/strctured_data_save.py",
+                    path + @"\strctured_data_save.py");
+                wc.DownloadFile(
+                    "https://github.com/ksj-10th-a09/selenium_crawl_p1/releases/latest/download/sqli.py",
+                    path + @"\sqli.py");
                 wc.DownloadFile(@"https://raw.githubusercontent.com/ksj-10th-a09/selenium_crawl_p1/main/version.txt",
                     path + @"\version.txt");
             }
@@ -323,9 +326,15 @@ public partial class Form1 : Form {
                 textBox1.AppendText(ex.Message + "\r\n");
                 btnStart.Text = res.btnStart;
             }
+            
+            //TODO: Receive result
+            bool result = false;
+
+            Uri        domain = new Uri(tbURL.Text);
+            reportForm rf     = new reportForm(tbURL.Text, domain.Host, result);
+            rf.ShowDialog();
         }
         else {
-            ;
             textBox1.AppendText("\r\n" + @"[INFO] Stop detection");
             btnStart.Text = res.btnStart;
         }

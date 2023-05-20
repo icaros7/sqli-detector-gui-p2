@@ -5,18 +5,19 @@ namespace selenium_gui_winform;
 public partial class reportForm : Form {
     private string _domain = "";
     private int _page;
-    private readonly string _path = "";
+    private string _path = "";
 
     private ScanPoint[] _pointArr;
-    private readonly bool _saved = false;
+    private bool _saved = false;
+    private bool _result;
     private int _scan;
-    private readonly string _url = "";
+    private string _url = "";
 
-    public reportForm(string url, string path, string domain) {
+    public reportForm(string url, string domain, bool result) {
         InitializeComponent();
         _url    = url;
-        _path   = path;
         _domain = domain;
+        _result = result;
     }
 
     private void reportForm_Load(object sender, EventArgs e) {
@@ -57,6 +58,7 @@ public partial class reportForm : Form {
         lbl_Link.Text          = res.link_ReadMore;
         btn_Save.Text          = res.btn_SaveAs;
         btn_Close.Text         = res.btn_Exit;
+        lbl_Result.Text        = _result ? res.status_Found : res.status_NotFound;
     }
 
     /// <summary>

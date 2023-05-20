@@ -5,6 +5,10 @@ using System.IO.Compression;
 namespace Selenium_gui_updater {
     class Program {
         static int Main(string[] args) {
+            if (args.Length < 1) {
+                Console.WriteLine(@"Error: no path");
+                return -1;
+            } 
             var path = args[0];
             // Try to download latest zip from repo
             try {
