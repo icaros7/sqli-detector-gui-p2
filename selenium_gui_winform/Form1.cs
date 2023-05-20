@@ -16,6 +16,36 @@ public partial class Form1 : Form {
         InitializeComponent();
     }
 
+    private void Form1_Load(object sender, EventArgs e) {
+        if (Settings.Default.saveSettings) {
+            if (Settings.Default.saveSettings) cbSave.Checked = true;
+            tbURL.Text = Settings.Default.lastURL;
+            switch (Settings.Default.lastBrowser) {
+                case 0:
+                    radioEdge.Checked = true;
+                    _browser          = radioEdge.Text;
+                    break;
+
+                case 1:
+                    radioChrome.Checked = true;
+                    _browser            = radioChrome.Text;
+                    break;
+
+                case 2:
+                    radioFirefox.Checked = true;
+                    _browser             = radioFirefox.Text;
+                    break;
+
+                case 3:
+                    radioOpera.Checked = true;
+                    _browser           = radioOpera.Text;
+                    break;
+            }
+        }
+
+        comboThread.SelectedIndex = 3;
+    }
+
     /// <summary>
     ///     Execute python file update method
     /// </summary>
@@ -297,21 +327,16 @@ public partial class Form1 : Form {
             textBox1.AppendText("\r\n" + @"[INFO] Start detection" + "\r\n");
             textBox1.AppendText(@"Browser: " + _browser + "\r\n");
             textBox1.AppendText(@"URL: " + tbURL.Text + "\r\n");
+            textBox1.AppendText(@"Threads: " + (comboThread.SelectedIndex + 1) + "\r\n");
             textBox1.AppendText(@"------------------------------" + "\r\n");
             textBox1.AppendText(res.waitForEnd + "\r\n");
             btnStart.Text = res.btnStop;
-
-            var cookie_str = "";
-            if (cookie.Count != 0)
-                foreach (var item in cookie)
-                    if (cookie_str == "") cookie_str =  $"{item.Key}.{item.Value}";
-                    else cookie_str                  += $",{item.Key}.{item.Value}";
 
             try {
                 Psi = new ProcessStartInfo {
                     FileName = @"python",
                     Arguments = ".\\execute\\main.py --browser=\"" + _browser + "\" --url=\"" + tbURL.Text +
-                                "\"",
+                                "\" --trhead=\"" + (comboThread.SelectedIndex + 1) + "\"",
                     RedirectStandardOutput = true,
                     RedirectStandardError  = true,
                     CreateNoWindow         = true
@@ -326,48 +351,16 @@ public partial class Form1 : Form {
                 textBox1.AppendText(ex.Message + "\r\n");
                 btnStart.Text = res.btnStart;
             }
-            
-            //TODO: Receive result
-            bool result = false;
 
-            Uri        domain = new Uri(tbURL.Text);
-            reportForm rf     = new reportForm(tbURL.Text, domain.Host, result);
+            //TODO: Receive result
+            var result = false;
+            var domain = new Uri(tbURL.Text);
+            var rf     = new reportForm(tbURL.Text, domain.Host, result);
             rf.ShowDialog();
         }
         else {
             textBox1.AppendText("\r\n" + @"[INFO] Stop detection");
             btnStart.Text = res.btnStart;
-        }
-    }
-
-    /// <summary>
-    ///     Call restore settings when I checked at saveSettings and apply language settings
-    /// </summary>
-    private void Form1_Load(object sender, EventArgs e) {
-        if (Settings.Default.saveSettings) {
-            if (Settings.Default.saveSettings) cbSave.Checked = true;
-            tbURL.Text = Settings.Default.lastURL;
-            switch (Settings.Default.lastBrowser) {
-                case 0:
-                    radioEdge.Checked = true;
-                    _browser          = radioEdge.Text;
-                    break;
-
-                case 1:
-                    radioChrome.Checked = true;
-                    _browser            = radioChrome.Text;
-                    break;
-
-                case 2:
-                    radioFirefox.Checked = true;
-                    _browser             = radioFirefox.Text;
-                    break;
-
-                case 3:
-                    radioOpera.Checked = true;
-                    _browser           = radioOpera.Text;
-                    break;
-            }
         }
 
         // Check Last Settings

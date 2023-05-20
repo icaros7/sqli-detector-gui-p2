@@ -162,6 +162,7 @@
             btn_Save.TabIndex = 11;
             btn_Save.Text = "Save As .txt";
             btn_Save.UseVisualStyleBackColor = true;
+            btn_Save.Click += btn_Save_Click;
             // 
             // lbl_ReadMore
             // 
@@ -196,8 +197,8 @@
             ShowInTaskbar = false;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "End Scan Report - https://328b-211-196-74-152.ngrok-free.app/DVWA/vulnerabilities/sqli";
-            Load += reportForm_Load;
             Closing += reportForm_Closing;
+            Load += reportForm_Load;
             gbDetailed.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();

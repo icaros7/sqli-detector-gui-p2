@@ -45,7 +45,7 @@
             radioEdge = new RadioButton();
             btnStart = new Button();
             textBox1 = new TextBox();
-            comboBox1 = new ComboBox();
+            comboThread = new ComboBox();
             lbl_Threads = new Label();
             menuStrip.SuspendLayout();
             groupBrowser.SuspendLayout();
@@ -190,12 +190,13 @@
             textBox1.Name = "textBox1";
             textBox1.ReadOnly = true;
             // 
-            // comboBox1
+            // comboThread
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { resources.GetString("comboBox1.Items"), resources.GetString("comboBox1.Items1"), resources.GetString("comboBox1.Items2"), resources.GetString("comboBox1.Items3"), resources.GetString("comboBox1.Items4"), resources.GetString("comboBox1.Items5"), resources.GetString("comboBox1.Items6"), resources.GetString("comboBox1.Items7") });
-            resources.ApplyResources(comboBox1, "comboBox1");
-            comboBox1.Name = "comboBox1";
+            comboThread.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboThread.FormattingEnabled = true;
+            comboThread.Items.AddRange(new object[] { resources.GetString("comboThread.Items"), resources.GetString("comboThread.Items1"), resources.GetString("comboThread.Items2"), resources.GetString("comboThread.Items3"), resources.GetString("comboThread.Items4"), resources.GetString("comboThread.Items5"), resources.GetString("comboThread.Items6"), resources.GetString("comboThread.Items7") });
+            resources.ApplyResources(comboThread, "comboThread");
+            comboThread.Name = "comboThread";
             // 
             // lbl_Threads
             // 
@@ -207,7 +208,7 @@
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(lbl_Threads);
-            Controls.Add(comboBox1);
+            Controls.Add(comboThread);
             Controls.Add(textBox1);
             Controls.Add(btnStart);
             Controls.Add(groupBrowser);
@@ -251,7 +252,7 @@
         private Button btnStart;
         private TextBox textBox1;
         private ToolStripMenuItem itemVersionGUI;
-        private ComboBox comboBox1;
+        private ComboBox comboThread;
         private Label lbl_Threads;
     }
 }

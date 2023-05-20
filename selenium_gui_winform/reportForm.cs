@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace selenium_gui_winform; 
+namespace selenium_gui_winform;
 
 public partial class reportForm : Form {
     private string _domain = "";
@@ -24,6 +24,8 @@ public partial class reportForm : Form {
         LangInit();
         SearchDetect();
 
+        lbl_Result.ForeColor = _result ? Color.Red : default;
+
         list_Detail.Items.Add(res.text_0 + _url);
         list_Detail.Items.Add("");
         list_Detail.Items.Add(res.text_1);
@@ -40,6 +42,18 @@ public partial class reportForm : Form {
         if (!_saved &&
             MessageBox.Show(res.string_NotSave, res.error, MessageBoxButtons.YesNo, MessageBoxIcon.Warning) ==
             DialogResult.No) e.Cancel = true;
+    }
+
+    private struct ScanPoint {
+        public readonly string File;
+        public readonly string Tag;
+        public readonly string Payload;
+
+        public ScanPoint(string file, string tag, string payload) {
+            File    = file;
+            Tag     = tag;
+            Payload = payload;
+        }
     }
 
     /// <summary>
@@ -65,12 +79,12 @@ public partial class reportForm : Form {
     ///     Get Count of find page & detect page
     /// </summary>
     private void SearchDetect() {
-        _page = Directory.GetFiles(_path, @"root__*.txt", SearchOption.AllDirectories).Length;
-        _scan = Directory.GetFiles(_path, @"_found_*.txt", SearchOption.AllDirectories).Length;
+        _page = Directory.GetFiles(_path, $"{_domain}_*.txt", SearchOption.AllDirectories).Length;
+        _scan = Directory.GetFiles(_path, @"_injectable_*.txt", SearchOption.AllDirectories).Length;
 
         _pointArr = new ScanPoint[_scan];
         for (var i = 0; i < _scan; i++)
-            //TODO: Read Format of _found_*.txt
+            //TODO: Read Format of _injectable_*.txt
             _pointArr[i] = new ScanPoint("File", "Tag", "Payload");
     }
 
@@ -79,15 +93,19 @@ public partial class reportForm : Form {
         Close();
     }
 
-    private struct ScanPoint {
-        public readonly string File;
-        public readonly string Tag;
-        public readonly string Payload;
+    /// <summary>
+    /// Save list to text file
+    /// </summary>
+    private void btn_Save_Click(object sender, EventArgs e) {
+        StreamWriter sw;
+        sw = new StreamWriter(Path.Combine(_path, @"_savedReport_.txt"));
 
-        public ScanPoint(string file, string tag, string payload) {
-            File    = file;
-            Tag     = tag;
-            Payload = payload;
+        for (var i = 0; i < list_Detail.Items.Count; i++) {
+            list_Detail.Items[i] += "\r\n";
+
+            sw.Write(list_Detail.Items[i]);
         }
+
+        sw.Close();
     }
 }
