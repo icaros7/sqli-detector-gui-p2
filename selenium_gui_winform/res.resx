@@ -250,7 +250,7 @@
         <value>But can cause CRITICAL consequences.</value>
     </data>
     <data name="text_0" xml:space="preserve">
-        <value>FOUND SQL Injection vulnerable point at </value>
+        <value>SQL Injection vulnerable point at </value>
     </data>
     <data name="link_ReadMore" xml:space="preserve">
         <value>Read More about SQLi</value>

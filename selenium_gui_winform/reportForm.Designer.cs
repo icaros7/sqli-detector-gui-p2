@@ -137,7 +137,6 @@
             // list_Detail
             // 
             list_Detail.ItemHeight = 15;
-            list_Detail.Items.AddRange(new object[] { "FOUND SQL Injection vulnerable point at https://328b-211-196-74-152.ngrok-free.app/DVWA/vulnerabilities/sqli/", "", "sqli.html -> <input> <- ` and 1=1 --", "", "----------------------------------------", "You know what? TIPs", "", "SQLI is not difficult tech-skill for even you.", "SQLI is just tiresome & tedious works.", "But can cause CRITICAL consequences." });
             list_Detail.Location = new Point(6, 22);
             list_Detail.Name = "list_Detail";
             list_Detail.ScrollAlwaysVisible = true;
@@ -194,7 +193,6 @@
             Controls.Add(lbl_Target);
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Name = "reportForm";
-            ShowInTaskbar = false;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "End Scan Report - https://328b-211-196-74-152.ngrok-free.app/DVWA/vulnerabilities/sqli";
             Closing += reportForm_Closing;

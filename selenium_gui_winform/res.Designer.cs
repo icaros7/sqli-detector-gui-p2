@@ -384,7 +384,7 @@ namespace selenium_gui_winform {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to FOUND SQL Injection vulnerable point at .
+        ///   Looks up a localized string similar to SQL Injection vulnerable point at .
         /// </summary>
         public static string text_0 {
             get {

@@ -194,7 +194,7 @@
             // 
             comboThread.DropDownStyle = ComboBoxStyle.DropDownList;
             comboThread.FormattingEnabled = true;
-            comboThread.Items.AddRange(new object[] { resources.GetString("comboThread.Items"), resources.GetString("comboThread.Items1"), resources.GetString("comboThread.Items2"), resources.GetString("comboThread.Items3"), resources.GetString("comboThread.Items4"), resources.GetString("comboThread.Items5"), resources.GetString("comboThread.Items6"), resources.GetString("comboThread.Items7") });
+            comboThread.Items.AddRange(new object[] { resources.GetString("comboThread.Items"), resources.GetString("comboThread.Items1"), resources.GetString("comboThread.Items2"), resources.GetString("comboThread.Items3"), resources.GetString("comboThread.Items4"), resources.GetString("comboThread.Items5"), resources.GetString("comboThread.Items6"), resources.GetString("comboThread.Items7"), resources.GetString("comboThread.Items8"), resources.GetString("comboThread.Items9") });
             resources.ApplyResources(comboThread, "comboThread");
             comboThread.Name = "comboThread";
             // 

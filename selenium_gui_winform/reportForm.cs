@@ -13,11 +13,12 @@ public partial class reportForm : Form {
     private int _scan;
     private string _url = "";
 
-    public reportForm(string url, string domain, bool result) {
+    public reportForm(string url, string domain, bool result, string path) {
         InitializeComponent();
         _url    = url;
         _domain = domain;
         _result = result;
+        _path   = path;
     }
 
     private void reportForm_Load(object sender, EventArgs e) {
@@ -107,5 +108,6 @@ public partial class reportForm : Form {
         }
 
         sw.Close();
+        _saved = true;
     }
 }

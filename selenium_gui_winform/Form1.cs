@@ -9,7 +9,6 @@ namespace selenium_gui_winform;
 public partial class Form1 : Form {
     private static ProcessStartInfo? Psi;
     private static Process? Proc;
-    private readonly Dictionary<string, string> cookie = new();
     private string _browser = @"Edge";
 
     public Form1() {
@@ -43,7 +42,26 @@ public partial class Form1 : Form {
             }
         }
 
-        comboThread.SelectedIndex = 2;
+        comboThread.SelectedIndex = 3;
+        
+        // Check Last Settings
+        if (Settings.Default.lastLang == null) {
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo("en");
+            Settings.Default.lastLang             = "en";
+            Settings.Default.Save();
+        }
+        else {
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo(Settings.Default.lastLang);
+        }
+
+        // Apply Language
+        LangInit();
+
+        // Append Text
+        textBox1.AppendText(@"Selenium SQLi Detector" + "\r\n");
+        textBox1.AppendText(@"Version: " + Application.ProductVersion + "\r\n");
+        textBox1.AppendText(@"K-Shield Jr.: A-09" + "\r\n");
+        textBox1.AppendText(@"------------------------------" + "\r\n");
     }
 
     /// <summary>
@@ -68,12 +86,10 @@ public partial class Form1 : Form {
                     "https://github.com/ksj-10th-a09/selenium_crawl_p1/releases/latest/download/final_a_href_crawl.py",
                     path + @"\final_a_href_crawl.py");
                 wc.DownloadFile(
-                    "https://github.com/ksj-10th-a09/selenium_crawl_p1/releases/latest/download/strctured_data_save.py",
-                    path + @"\strctured_data_save.py");
+                    "https://github.com/ksj-10th-a09/selenium_crawl_p1/releases/latest/download/structured_data_save.py",
+                    path + @"\structured_data_save.py");
                 wc.DownloadFile(
-                    "https://github.com/ksj-10th-a09/selenium_crawl_p1/releases/latest/download/sqli.py",
-                    path + @"\sqli.py");
-                wc.DownloadFile(@"https://raw.githubusercontent.com/ksj-10th-a09/selenium_crawl_p1/main/version.txt",
+                    "https://github.com/ksj-10th-a09/selenium_crawl_p1/releases/latest/download/version.txt",
                     path + @"\version.txt");
             }
             catch (IOException) {
@@ -148,8 +164,8 @@ public partial class Form1 : Form {
     private static bool CheckExecuteExist() {
         var path = Path.Combine(Application.StartupPath, @"execute");
 
-        return File.Exists(path + @"\main.py") && File.Exists(path + @"\get_html.py") &&
-               File.Exists(path + @"\crawler.py");
+        return File.Exists(path + @"\main.py") && File.Exists(path + @"\final_a_href_crawl.py") &&
+               File.Exists(path + @"\structured_data_save.py");
     }
 
     /// <summary>
@@ -185,17 +201,7 @@ public partial class Form1 : Form {
         Proc.BeginErrorReadLine();
 
         Proc.OutputDataReceived += (sender, e) => textBox1.AppendText(e.Data + "\r\n");
-        Proc.ErrorDataReceived += (sender, e) => {
-            if (e.Data == @"ModuleNotFoundError: No module named 'selenium'") {
-                if (MessageBox.Show(res.seleniumNotFound, res.information, MessageBoxButtons.OKCancel,
-                        MessageBoxIcon.Question) == DialogResult.OK)
-                    Process.Start(@"python -m pip install selenium");
-                else
-                    return;
-            }
-
-            textBox1.AppendText(e.Data + "\r\n");
-        };
+        Proc.ErrorDataReceived  += (sender, e) => textBox1.AppendText(e.Data + "\r\n");
 
         await Proc.WaitForExitAsync();
 
@@ -205,6 +211,13 @@ public partial class Form1 : Form {
 
         textBox1.AppendText(@"[INFO] Finished." + "\r\n");
         btnStart.Text = res.btnStart;
+
+        //TODO: Receive result from sqli test module
+        var result = false;
+        var domain = new Uri(tbURL.Text);
+        var rf = new reportForm(tbURL.Text, domain.Host, result,
+            Path.Combine(Application.StartupPath, domain.Host));
+        rf.ShowDialog();
     }
 
     private void itemEng_Click(object sender, EventArgs e) {
@@ -291,7 +304,7 @@ public partial class Form1 : Form {
             Settings.Default.Save();
         }
 
-        // Check main.py exist
+        // Check excute file exist
         if (!CheckExecuteExist())
             try {
                 var verFile = Path.Combine(Application.StartupPath, @"\execute\version.txt");
@@ -336,7 +349,7 @@ public partial class Form1 : Form {
                 Psi = new ProcessStartInfo {
                     FileName = @"python",
                     Arguments = ".\\execute\\main.py --browser=\"" + _browser + "\" --url=\"" + tbURL.Text +
-                                "\" --trhead=\"" + (comboThread.SelectedIndex + 1) + "\"",
+                                "\" --thread=\"" + (comboThread.SelectedIndex + 1) + "\"",
                     RedirectStandardOutput = true,
                     RedirectStandardError  = true,
                     CreateNoWindow         = true
@@ -351,36 +364,11 @@ public partial class Form1 : Form {
                 textBox1.AppendText(ex.Message + "\r\n");
                 btnStart.Text = res.btnStart;
             }
-
-            //TODO: Receive result
-            var result = false;
-            var domain = new Uri(tbURL.Text);
-            var rf     = new reportForm(tbURL.Text, domain.Host, result);
-            rf.ShowDialog();
         }
         else {
             textBox1.AppendText("\r\n" + @"[INFO] Stop detection");
             btnStart.Text = res.btnStart;
         }
-
-        // Check Last Settings
-        if (Settings.Default.lastLang == null) {
-            Thread.CurrentThread.CurrentUICulture = new CultureInfo("en");
-            Settings.Default.lastLang             = "en";
-            Settings.Default.Save();
-        }
-        else {
-            Thread.CurrentThread.CurrentUICulture = new CultureInfo(Settings.Default.lastLang);
-        }
-
-        // Apply Language
-        LangInit();
-
-        // Append Text
-        textBox1.AppendText(@"Selenium SQLi Detector" + "\r\n");
-        textBox1.AppendText(@"Version: " + Application.ProductVersion + "\r\n");
-        textBox1.AppendText(@"K-Shield Jr.: A-09" + "\r\n");
-        textBox1.AppendText(@"------------------------------" + "\r\n");
     }
 
     /// <summary>

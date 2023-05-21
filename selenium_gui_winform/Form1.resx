@@ -1,6 +1,6 @@
 ﻿<root>
-    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root"
-                xmlns="">
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <xsd:import namespace="http://www.w3.org/XML/1998/namespace"/>
         <xsd:element name="root" msdata:IsDataSet="true">
             <xsd:complexType>
@@ -155,6 +155,63 @@
               type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
         <value>17, 17</value>
     </metadata>
+    <data name="itemExit.Size" type="System.Drawing.Size, System.Drawing">
+        <value>93, 22</value>
+    </data>
+    <data name="itemExit.Text" xml:space="preserve">
+    <value>&amp;Exit</value>
+  </data>
+    <data name="stripFile.Size" type="System.Drawing.Size, System.Drawing">
+        <value>37, 20</value>
+    </data>
+    <data name="stripFile.Text" xml:space="preserve">
+    <value>&amp;File</value>
+  </data>
+    <data name="itemKor.Size" type="System.Drawing.Size, System.Drawing">
+        <value>112, 22</value>
+    </data>
+    <data name="itemKor.Text" xml:space="preserve">
+    <value>한국어</value>
+  </data>
+    <data name="itemEng.Size" type="System.Drawing.Size, System.Drawing">
+        <value>112, 22</value>
+    </data>
+    <data name="itemEng.Text" xml:space="preserve">
+    <value>English</value>
+  </data>
+    <data name="stripLang.Size" type="System.Drawing.Size, System.Drawing">
+        <value>71, 20</value>
+    </data>
+    <data name="stripLang.Text" xml:space="preserve">
+    <value>&amp;Language</value>
+  </data>
+    <data name="itemVersion.Size" type="System.Drawing.Size, System.Drawing">
+        <value>155, 22</value>
+    </data>
+    <data name="itemVersion.Text" xml:space="preserve">
+    <value>Check Update</value>
+  </data>
+    <data name="itemVersionGUI.Size" type="System.Drawing.Size, System.Drawing">
+        <value>155, 22</value>
+    </data>
+    <data name="itemVersionGUI.Text" xml:space="preserve">
+    <value>itemVersionGUI</value>
+  </data>
+    <data name="itemBar.Size" type="System.Drawing.Size, System.Drawing">
+        <value>152, 6</value>
+    </data>
+    <data name="itemAbout.Size" type="System.Drawing.Size, System.Drawing">
+        <value>155, 22</value>
+    </data>
+    <data name="itemAbout.Text" xml:space="preserve">
+    <value>About</value>
+  </data>
+    <data name="stripHelp.Size" type="System.Drawing.Size, System.Drawing">
+        <value>44, 20</value>
+    </data>
+    <data name="stripHelp.Text" xml:space="preserve">
+    <value>&amp;Help</value>
+  </data>
     <data name="menuStrip.Location" type="System.Drawing.Point, System.Drawing">
         <value>0, 0</value>
     </data>
@@ -181,141 +238,6 @@
   </data>
     <data name="&gt;&gt;menuStrip.ZOrder" xml:space="preserve">
     <value>8</value>
-  </data>
-    <data name="stripFile.Size" type="System.Drawing.Size, System.Drawing">
-        <value>37, 20</value>
-    </data>
-    <data name="stripFile.Text" xml:space="preserve">
-    <value>&amp;File</value>
-  </data>
-    <data name="itemExit.Size" type="System.Drawing.Size, System.Drawing">
-        <value>93, 22</value>
-    </data>
-    <data name="itemExit.Text" xml:space="preserve">
-    <value>&amp;Exit</value>
-  </data>
-    <data name="stripLang.Size" type="System.Drawing.Size, System.Drawing">
-        <value>71, 20</value>
-    </data>
-    <data name="stripLang.Text" xml:space="preserve">
-    <value>&amp;Language</value>
-  </data>
-    <data name="itemKor.Size" type="System.Drawing.Size, System.Drawing">
-        <value>112, 22</value>
-    </data>
-    <data name="itemKor.Text" xml:space="preserve">
-    <value>한국어</value>
-  </data>
-    <data name="itemEng.Size" type="System.Drawing.Size, System.Drawing">
-        <value>112, 22</value>
-    </data>
-    <data name="itemEng.Text" xml:space="preserve">
-    <value>English</value>
-  </data>
-    <data name="stripHelp.Size" type="System.Drawing.Size, System.Drawing">
-        <value>44, 20</value>
-    </data>
-    <data name="stripHelp.Text" xml:space="preserve">
-    <value>&amp;Help</value>
-  </data>
-    <data name="itemVersion.Size" type="System.Drawing.Size, System.Drawing">
-        <value>155, 22</value>
-    </data>
-    <data name="itemVersion.Text" xml:space="preserve">
-    <value>Check Update</value>
-  </data>
-    <data name="itemVersionGUI.Size" type="System.Drawing.Size, System.Drawing">
-        <value>155, 22</value>
-    </data>
-    <data name="itemVersionGUI.Text" xml:space="preserve">
-    <value>itemVersionGUI</value>
-  </data>
-    <data name="itemBar.Size" type="System.Drawing.Size, System.Drawing">
-        <value>152, 6</value>
-    </data>
-    <data name="itemAbout.Size" type="System.Drawing.Size, System.Drawing">
-        <value>155, 22</value>
-    </data>
-    <data name="itemAbout.Text" xml:space="preserve">
-    <value>About</value>
-  </data>
-    <data name="&gt;&gt;radioOpera.Name" xml:space="preserve">
-    <value>radioOpera</value>
-  </data>
-    <data name="&gt;&gt;radioOpera.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-    <data name="&gt;&gt;radioOpera.Parent" xml:space="preserve">
-    <value>groupBrowser</value>
-  </data>
-    <data name="&gt;&gt;radioOpera.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-    <data name="&gt;&gt;radioFirefox.Name" xml:space="preserve">
-    <value>radioFirefox</value>
-  </data>
-    <data name="&gt;&gt;radioFirefox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-    <data name="&gt;&gt;radioFirefox.Parent" xml:space="preserve">
-    <value>groupBrowser</value>
-  </data>
-    <data name="&gt;&gt;radioFirefox.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-    <data name="&gt;&gt;radioChrome.Name" xml:space="preserve">
-    <value>radioChrome</value>
-  </data>
-    <data name="&gt;&gt;radioChrome.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-    <data name="&gt;&gt;radioChrome.Parent" xml:space="preserve">
-    <value>groupBrowser</value>
-  </data>
-    <data name="&gt;&gt;radioChrome.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-    <data name="&gt;&gt;radioEdge.Name" xml:space="preserve">
-    <value>radioEdge</value>
-  </data>
-    <data name="&gt;&gt;radioEdge.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-    <data name="&gt;&gt;radioEdge.Parent" xml:space="preserve">
-    <value>groupBrowser</value>
-  </data>
-    <data name="&gt;&gt;radioEdge.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-    <data name="groupBrowser.Location" type="System.Drawing.Point, System.Drawing">
-        <value>10, 47</value>
-    </data>
-    <data name="groupBrowser.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-        <value>3, 2, 3, 2</value>
-    </data>
-    <data name="groupBrowser.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-        <value>3, 2, 3, 2</value>
-    </data>
-    <data name="groupBrowser.Size" type="System.Drawing.Size, System.Drawing">
-        <value>314, 40</value>
-    </data>
-    <data name="groupBrowser.TabIndex" type="System.Int32, mscorlib">
-        <value>4</value>
-    </data>
-    <data name="groupBrowser.Text" xml:space="preserve">
-    <value>Select Brower</value>
-  </data>
-    <data name="&gt;&gt;groupBrowser.Name" xml:space="preserve">
-    <value>groupBrowser</value>
-  </data>
-    <data name="&gt;&gt;groupBrowser.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-    <data name="&gt;&gt;groupBrowser.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-    <data name="&gt;&gt;groupBrowser.ZOrder" xml:space="preserve">
-    <value>4</value>
   </data>
     <data name="radioOpera.AutoSize" type="System.Boolean, mscorlib">
         <value>True</value>
@@ -451,6 +373,36 @@
     <data name="&gt;&gt;radioEdge.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+    <data name="groupBrowser.Location" type="System.Drawing.Point, System.Drawing">
+        <value>10, 47</value>
+    </data>
+    <data name="groupBrowser.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+        <value>3, 2, 3, 2</value>
+    </data>
+    <data name="groupBrowser.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+        <value>3, 2, 3, 2</value>
+    </data>
+    <data name="groupBrowser.Size" type="System.Drawing.Size, System.Drawing">
+        <value>314, 40</value>
+    </data>
+    <data name="groupBrowser.TabIndex" type="System.Int32, mscorlib">
+        <value>4</value>
+    </data>
+    <data name="groupBrowser.Text" xml:space="preserve">
+    <value>Select Brower</value>
+  </data>
+    <data name="&gt;&gt;groupBrowser.Name" xml:space="preserve">
+    <value>groupBrowser</value>
+  </data>
+    <data name="&gt;&gt;groupBrowser.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+    <data name="&gt;&gt;groupBrowser.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+    <data name="&gt;&gt;groupBrowser.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
     <data name="btnStart.Location" type="System.Drawing.Point, System.Drawing">
         <value>241, 96</value>
     </data>
@@ -515,22 +467,28 @@
     <value>2</value>
   </data>
     <data name="comboThread.Items2" xml:space="preserve">
-    <value>4</value>
+    <value>3</value>
   </data>
     <data name="comboThread.Items3" xml:space="preserve">
-    <value>6</value>
+    <value>4</value>
   </data>
     <data name="comboThread.Items4" xml:space="preserve">
-    <value>8</value>
+    <value>5</value>
   </data>
     <data name="comboThread.Items5" xml:space="preserve">
-    <value>10</value>
+    <value>6</value>
   </data>
     <data name="comboThread.Items6" xml:space="preserve">
-    <value>16</value>
+    <value>7</value>
   </data>
     <data name="comboThread.Items7" xml:space="preserve">
-    <value>32</value>
+    <value>8</value>
+  </data>
+    <data name="comboThread.Items8" xml:space="preserve">
+    <value>9</value>
+  </data>
+    <data name="comboThread.Items9" xml:space="preserve">
+    <value>10</value>
   </data>
     <data name="comboThread.Location" type="System.Drawing.Point, System.Drawing">
         <value>76, 98</value>
